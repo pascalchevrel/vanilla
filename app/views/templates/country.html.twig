@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block head_additions %}
+    <meta name="description" content="{{ data.country.country_code }}">
+{% endblock %}
+
+{% block header %}
+    {{  dump(data.countries[country_code].name) }}
+  <h1 class="text-center fw-semibold">Country card: {{ data.countries[country_code].name }}</h1>
+{% endblock %}
+
+{% block main %}
+<table>
+    <tbody>
+        <tr>
+            <th>Population</th>
+            <td>{{ data.countries[country_code].population }}</td>
+        </tr>
+        <tr>
+            <th>Community site</th>
+            <td>{{ data.countries[country_code].community }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

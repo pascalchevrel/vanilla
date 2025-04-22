@@ -1,0 +1,110 @@
+/* General structure */
+:root {
+    --bg-purple: #2a0c55;
+    --bg-table-hover: #f2e9ff;
+    --bg-alert-purple-light: #cfe2ff;
+}
+
+/* Fonts */
+:root {
+    font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root { font-family: "InterVariable", sans-serif; font-optical-sizing: auto; }
+}
+
+html {
+    height: 100%;
+    background-color: #2a0c55;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-purple);
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h2, h3 {
+    font-weight: 300;
+}
+
+.table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table td,
+.table th {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.force-default-bg  {
+    box-shadow: unset !important;
+}
+
+/* home page */
+#homepage h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2em;
+}
+
+#homepage :is(h1, h2, h3) {
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 460px) {
+    /* deactivate bootstrap 50% & 75% width on narrow screens */
+    .w-50,
+    .w-75 {
+        width: auto !important;
+    }
+
+    #homepage h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
+    }
+
+    #homepage :is(h1, h2, h3) {
+        margin-top: 0.5em;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 2em;
+}
+
+h3:target {
+/*   background-color: #ffa;*/
+   color: #0dcaf0;
+}
+
+h3:target + table {
+    box-shadow: 0px 0px 14px -1px #0dcaf0;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.bg-purple {
+    background-color: var(--bg-purple);
+}

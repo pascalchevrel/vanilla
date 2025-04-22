@@ -1,0 +1,81 @@
+{
+    "license": "MPL-2.0",
+    "name": "pascalchevrel/vanilla",
+    "description": "class_namespace",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mozilla-l10n/phpclass-json",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/pascalchevrel/Verif/",
+            "no-api": true
+        }
+    ],
+    "require": {
+        "php": "~8.4.0",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "twig/twig": "^3.0",
+        "twig/intl-extra": "^3.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "components/jquery": "^3.4",
+        "twbs/bootstrap": "^5.3",
+        "twbs/bootstrap-icons": "^1.8",
+        "symfony/cache": "^7",
+        "kevinrob/guzzle-cache-middleware": "^6.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "pestphp/pest": "^3.0",
+        "symfony/var-dumper": "^6",
+        "pchevrel/verif": "^0.5.1",
+        "overtrue/phplint": "^9.5",
+        "spatie/laravel-ignition": "^2.0",
+        "rector/rector": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Framy\\": "app/classes/Framy",
+            "Cache\\": "app/classes/Cache",
+            "Vanilla\\": "app/classes/Vanilla"
+        }
+    },
+    "scripts": {
+        "cache:clear": "rm cache/*.cache ; rm -rf cache/twig/*; rm -rf cache/guzzle/*",
+        "cache:clean": "composer cache:clear",
+        "test:unit": "vendor/bin/pest",
+        "test:unitcov": "XDEBUG_MODE=coverage vendor/bin/pest --coverage",
+        "test:coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage | tail -15",
+        "test:static": "vendor/bin/phpstan",
+        "test:lint": "vendor/bin/phplint . --exclude vendor",
+        "test:all": [
+            "@test:lint",
+            "@test:unitcov",
+            "@test:static"
+        ],
+        "test": [
+            "@test:unit"
+        ],
+        "post-install-cmd": [
+            "rm -rf public/assets/bootstrap",
+            "cp -r vendor/twbs/bootstrap/dist public/assets/bootstrap",
+            "cp vendor/twbs/bootstrap-icons/font/bootstrap-icons.css public/assets/bootstrap/css/",
+            "cp -r vendor/twbs/bootstrap-icons/font/fonts/ public/assets/bootstrap/css/",
+            "rm -rf public/assets/jquery",
+            "cp -r vendor/components/jquery/ public/assets/jquery",
+            "rm public/assets/jquery/README.md"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    }
+}

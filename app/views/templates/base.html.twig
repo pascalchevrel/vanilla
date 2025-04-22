@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>{{ page_title }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-icons.css" media="screen">
+        <link rel="stylesheet" href="/assets/fonts/Inter-4.1/inter.css">
+        <link rel="stylesheet" href="/style/base.css" type="text/css" media="all">
+
+        {% if branch != '' %}
+        <link rel="icon" type="image/svg+xml" href="/assets/img/site_icon_dev.svg">
+        {% else %}
+        <link rel="icon" type="image/svg+xml" href="/assets/img/site_icon.svg">
+        {% endif %}
+        <link rel="apple-touch-icon" type="image/png" href="/assets/img/site_icon.png">
+        <link rel="author" href="humans.txt">
+
+        <meta property="og:site_name" content="{{ page_title }}">
+        <meta property="og:title" content="{{ page_title }}">
+        <meta property="og:description" content="">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@pascalchevrel">
+        <meta property="twitter:title" content="{{ page_title }}">
+        <meta property="twitter:image" content="https://whattrainisitnow.com/assets/img/site-sharing-header.png">
+
+        {% block head_additions %}{% endblock %}
+    </head>
+    <body id="{{ css_page_id }}" class="container-fluid px-lg-5">
+        {% if branch != '' %}
+        <div class="position-fixed top-0 start-50 translate-middle badge text-bg-info font-monospace mt-4" title="Git branch"><small>{{ branch }}</small></div>
+        {% endif %}
+
+        {% block header %}{% endblock %}
+        {% block main %}{% endblock %}
+        <script src="/assets/jquery/jquery.slim.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        {% block footer %}{% endblock %}
+    </body>
+</html>
