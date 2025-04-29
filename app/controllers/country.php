@@ -6,7 +6,6 @@ use \Framy\{Model, Template};
 use \Vanilla\Europe;
 
 $europe = new Europe();
-$valid_country_codes = array_keys($europe->countries);
 
 if (isset($_GET['code']) && in_array($_GET['code'], array_keys($europe->countries))) {
     $target = $_GET['code'];

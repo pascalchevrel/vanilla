@@ -4,16 +4,20 @@
 {% endblock %}
 
 {% block header %}
-    {{  dump(data.countries[country_code].name) }}
-  <h1 class="text-center fw-semibold">Country card: {{ data.countries[country_code].name }}</h1>
+  <h1 class="text-center fw-semibold">Country card: </h1>
 {% endblock %}
 
 {% block main %}
-<table>
+<table class="table table-sm w-75 justify-content-center">
+    <caption>{{ data.countries[country_code].name }}</caption>
     <tbody>
         <tr>
             <th>Population</th>
-            <td>{{ data.countries[country_code].population }}</td>
+            <td>{{ data.countries[country_code].population|number_format }}</td>
+        </tr>
+        <tr>
+            <th>Addressable Desktop market (2025)</th>
+            <td>{{ data.getDesktopPotentialMarket(country_code)|number_format }}</td>
         </tr>
         <tr>
             <th>Community site</th>
