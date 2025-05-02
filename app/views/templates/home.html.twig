@@ -10,9 +10,19 @@
 {% endblock %}
 
 {% block main %}
-<h3>Total population of countries studied:  {{ data.population|number_format }}</h3>
-
-
+<table class="table table-sm w-75 justify-content-center">
+    <caption>All countries studied</caption>
+    <tbody>
+        <tr>
+            <th>Total population of countries studied:</th>
+            <td class="text-end">{{ data.population|number_format }}</td>
+        </tr>
+        <tr>
+            <th>Addressable Desktop market (2025)</th>
+            <td class="text-end">{{ data.desktopPotentialMarket()|number_format }}</td>
+        </tr>
+    </tbody>
+</table>
 
 
 {% endblock %}

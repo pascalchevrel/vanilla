@@ -88,12 +88,21 @@ class Europe
         return array_sum(array_column($this->countries, 'population'));
     }
 
-    public function getDesktopPotentialMarket(string $country_code): int
+    public function getDesktopPotentialMarket(string $country_code = 'ALL'): int
     {
-        return (int)
-            ($this->countries[$country_code]['population'] // Total population
-            * $this->countries[$country_code]['populationCore'] // People 10-75 yo
-            * $this->countries[$country_code]['net_access'] // Country % access to internet
-            * $this->countries[$country_code]['desktop_access']); // % of internet traffic from Desktop
+        $countries = ($country_code == 'ALL')
+            ? array_keys($this->countries)
+            : [$country_code];
+
+        $market = 0;
+
+        foreach ($countries as $country_code) {
+            $market += $this->countries[$country_code]['population']  // Total population
+                * $this->countries[$country_code]['populationCore']  // People 10-75 yo
+                * $this->countries[$country_code]['net_access']      // Country % access to internet
+                * $this->countries[$country_code]['desktop_access']; // % of internet traffic from Desktop
+        }
+
+        return (int) $market;
     }
 }
