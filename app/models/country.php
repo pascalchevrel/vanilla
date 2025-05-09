@@ -4,8 +4,14 @@ declare(strict_types=1);
 
 use \Vanilla\Europe;
 
-$data = new Europe();
+$europe = new Europe();
+$country = 'ES'; // Default to Spain
+
+if (isset($_GET['code']) && in_array($_GET['code'], array_keys($europe->countries))) {
+    $country = $_GET['code'];
+}
 
 return [
-    $data,
+    $country,
+    $europe,
 ];

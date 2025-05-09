@@ -5,12 +5,12 @@
 
 {% block header %}
     <h1><a href="/" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a></h1>
-    <h2 class="text-center fw-semibold">Country card: </h2>
+
+    <h2 class="text-center">Country card: {{ data.countries[country_code].name }}</h2>
 {% endblock %}
 
 {% block main %}
 <table class="table table-sm w-75 justify-content-center">
-    <caption>{{ data.countries[country_code].name }}</caption>
     <tbody>
         <tr>
             <th>Population</th>
@@ -20,10 +20,24 @@
             <th>Addressable Desktop market (2025)</th>
             <td>{{ data.desktopPotentialMarket(country_code)|number_format }}</td>
         </tr>
+        {%  if data.countries[country_code].community != '' %}
         <tr>
             <th>Community site</th>
             <td>{{ data.countries[country_code].community }}</td>
         </tr>
+        {%  endif %}
+        <tr>
+            <th>Languages</th>
+            <td>
+            {% for key, values in data.getLocaleData(country_code) %}
+                <span
+                    title="{{ key }}"
+                    {% if key == data.countries[country_code].main_language %} class="fw-semibold"{% endif %}
+                >{{ values.name }}</span>{% if not loop.last %} - {% endif %}
+            {% endfor %}
+            </td>
+        </tr>
+
     </tbody>
 </table>
 

@@ -1,8 +1,10 @@
 /* General structure */
 :root {
-    --bg-purple: #2a0c55;
-    --bg-table-hover: #f2e9ff;
-    --bg-alert-purple-light: #cfe2ff;
+    /* colors */
+    --background-color: rgb(226, 241, 231);
+    --dark-color: rgb(26, 44, 56);
+    --medium-color: rgb(56, 116, 120);
+    --light-color: rgb(98, 149, 132);
 }
 
 /* Fonts */
@@ -14,18 +16,13 @@
     :root { font-family: "InterVariable", sans-serif; font-optical-sizing: auto; }
 }
 
-html {
-    height: 100%;
-    background-color: #2a0c55;
-}
-
 body {
     font-family: "Inter", sans-serif;
-    background-color: var(--bg-purple);
-    color: white;
+    background-color: var(--background-color);
+    color: var(--dark-color);
 }
 
-header {
+header, footer {
     text-align: center;
 }
 
@@ -39,11 +36,46 @@ a:hover {
 
 h1 {
     font-weight: 400;
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-h2, h3 {
+h2 {
     font-weight: 300;
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
+
+h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-vanilla-dark {
+    color: var(--dark-color) !important;
+}
+
+.text-vanilla-medium {
+    color: var(--medium-color) !important;
+}
+
+.text-vanilla-light {
+    color: var(--medium-color) !important;
+}
+
+th {
+    color: var(--dark-color) !important;
+    font-weight: 500;
+}
+
+td {
+    color: var(--medium-color) !important;
+}
+
 
 .table {
     margin: 0 auto;
@@ -56,20 +88,6 @@ h2, h3 {
     padding-right: 0.5rem;
 }
 
-.force-default-bg  {
-    box-shadow: unset !important;
-}
-
-/* home page */
-#homepage h1 {
-    font-size: 3.5rem;
-    margin-bottom: 2em;
-}
-
-#homepage :is(h1, h2, h3) {
-    margin-top: 1em;
-}
-
 @media only screen and (max-width: 460px) {
     /* deactivate bootstrap 50% & 75% width on narrow screens */
     .w-50,
@@ -78,8 +96,7 @@ h2, h3 {
     }
 
     #homepage h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5em;
+        font-size: 1.5rem;
     }
 
     #homepage :is(h1, h2, h3) {
@@ -88,23 +105,9 @@ h2, h3 {
 }
 
 footer {
-    text-align: center;
     margin-top: 2em;
-}
-
-h3:target {
-/*   background-color: #ffa;*/
-   color: #0dcaf0;
-}
-
-h3:target + table {
-    box-shadow: 0px 0px 14px -1px #0dcaf0;
 }
 
 .w-10 {
     width: 10%;
-}
-
-.bg-purple {
-    background-color: var(--bg-purple);
 }

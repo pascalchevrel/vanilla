@@ -18,10 +18,11 @@ class FirefoxL10n
 
         The locales we care about are those we actually ship products for. There are WIP locales but they are out
         of the scope of this class.
-     */
+    */
     protected $data_stamp = '2025-05-06';
 
-    public array $firefox_locales = [
+    // Source: https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/browser/locales/shipped-locales
+    public array $firefox_desktop_locales = [
         'ach', 'af', 'an', 'ar', 'ast', 'az', 'be', 'bg', 'bn', 'br', 'bs', 'ca', 'ca-valencia', 'cak', 'cs', 'cy', 'da',
         'de', 'dsb', 'el', 'en-CA', 'en-GB', 'en-US', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et', 'eu', 'fa', 'ff',
         'fi', 'fr', 'fur', 'fy-NL', 'ga-IE', 'gd', 'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb', 'hu', 'hy-AM', 'ia',
@@ -30,6 +31,20 @@ class FirefoxL10n
         'sco', 'si', 'sk', 'skr', 'sl', 'son', 'sq', 'sr', 'sv-SE', 'szl', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'trs',
         'uk', 'ur', 'uz', 'vi', 'xh', 'zh-CN', 'zh-TW',
     ];
+
+    // Source https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/mobile/android/locales/all-locales
+    public array $locales_with_dictionary = [
+        'bg', 'br', 'ca', 'da', 'el', 'en-CA', 'es-AR', 'es-CL', 'es-ES', 'es-MX',
+        'et', 'fr', 'fy-NL', 'hu', 'id', 'ja', 'ja-JP-mac', 'lt', 'lv', 'mk', 'nl',
+        'pl', 'pt-BR', 'pt-PT', 'rm', 'ro', 'ru', 'sk', 'sr', 'sv-SE', 'uk', 'vi',
+        'zh-TW',
+    ];
+
+    // Source:
+    public array $firefox_fenix_locales = [
+
+    ];
+
 
     public array $european_locales = [
         'an', 'ast', 'be', 'bg',  'br', 'bs', 'ca', 'ca-valencia', 'cs', 'cy', 'da', 'de', 'dsb', 'el', 'en-GB', 'es-ES',
@@ -43,7 +58,7 @@ class FirefoxL10n
         'bg'          => 'Bulgarian',
         'br'          => 'Breton',
         'ca'          => 'Catalan',
-        'ca-valencia' => 'Catalan (Valancian)',
+        'ca-valencia' => 'Catalan (Valencian)',
         'da'          => 'Danish',
         'el'          => 'Greek',
         'en-CA'       => 'English (Canada)',
@@ -78,12 +93,6 @@ class FirefoxL10n
         'zh-TW'       => 'Chinese (Traditional)',
     ];
 
-    public array $locales_with_dictionary = [
-        'bg', 'br', 'ca', 'da', 'el', 'en-CA', 'es-AR', 'es-CL', 'es-ES', 'es-MX',
-        'et', 'fr', 'fy-NL', 'hu', 'id', 'ja', 'ja-JP-mac', 'lt', 'lv', 'mk', 'nl',
-        'pl', 'pt-BR', 'pt-PT', 'rm', 'ro', 'ru', 'sk', 'sr', 'sv-SE', 'uk', 'vi',
-        'zh-TW',
-    ];
 
     protected array $euro_locales_with_dict;
 

@@ -4,18 +4,20 @@
       <meta name="description" content="{{ meta_description }}">
 {% endblock %}
 
-
 {% block header %}
-    <h1 class="text-center fw-semibold">Vanilla project<br><small class="fs-4 fw-normal mt-0 pt-1">A study of Firefox in Sourthern Europe</small></h1>
+    <div  class="text-center fw-semibold">
+        <h1>Vanilla project</h1>
+        <h2>A study of Firefox in Sourthern Europe</h2>
+        <h3>Countries studied:
+        {% for key, values in data.countries %}
+            <a href="/country/?code={{ key }}">{{ data.countries[key].name }}</a>{%  if not loop.last %}, {% else %}.{%  endif %}
+        {% endfor %}
+        </h3>
+    </div>
 {% endblock %}
 
 {% block main %}
 <table class="table table-sm w-75 justify-content-center">
-    <caption class="text-white">All countries studied:
-        {% for key, values in data.countries %}
-            <a href="/country/?code={{ key }}">{{ data.countries[key].name }}</a>{%  if not loop.last %}, {% else %}.{%  endif %}
-        {% endfor %}
-    </caption>
     <tbody>
         <tr>
             <th>Total population of countries studied:</th>

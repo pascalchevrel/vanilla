@@ -6,13 +6,19 @@ namespace Vanilla;
 
 class Europe
 {
+    /*
+        The data should be revised regularly and depends on syncing with multiple online sources
+        The data is known as correct at the date below.
+    */
+    protected $data_stamp = '2025-05-06';
+
     public array $countries = [
         'ES' => [
             'name'           => 'Spain',
-            'languages'      => ['es-ES', 'ca', 'gl', 'eu', 'ast', 'ca-valencia',],
+            'languages'      => ['ast', 'ca', 'ca-valencia', 'es-ES',  'eu', 'gl',],
+            'main_language'  => 'es-ES',
             'population'     => 47_893_887, // https://www.worldometers.info/world-population/europe-population/
             'populationCore' => 0.82, // Population age 10-75, various sources
-            'products'       => ['Firefox', 'Focus', 'Fenix', 'Thunderbird',],
             'dictionary'     => true,
             'community'      => 'http://www.proyectonave.es/',
             'market_share'   => 0,
@@ -22,9 +28,9 @@ class Europe
         'GR' => [
             'name'           => 'Greece',
             'languages'      => ['el'],
+            'main_language'  => 'el',
             'population'     => 9_959_557,
             'populationCore' => 0.8,
-            'products'       => ['Firefox', 'Focus', 'Fenix', 'Thunderbird',],
             'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
@@ -34,9 +40,9 @@ class Europe
         'IT' => [
             'name'           => 'Italy',
             'languages'      => ['it', 'lij'],
+            'main_language'  => 'it',
             'population'     => 59_153_758,
             'populationCore' => 0.78,
-            'products'       => ['Firefox', 'Focus', 'Fenix', 'Thunderbird',],
             'dictionary'     => false,
             'community'      => 'https://www.mozillaitalia.org/',
             'market_share'   => 0,
@@ -46,9 +52,9 @@ class Europe
         'PT' => [
             'name'           => 'Portugal',
             'languages'      => ['pt-PT'],
+            'main_language'  => 'pt-PT',
             'population'     => 10_414_399,
             'populationCore' => 0.78,
-            'products'       => ['Firefox', 'Focus', 'Fenix', 'Thunderbird',],
             'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
@@ -58,9 +64,9 @@ class Europe
         'RO' => [
             'name'           => 'Romania',
             'languages'      => ['ro'],
+            'main_language'  => 'ro',
             'population'     => 18_928_687,
             'populationCore' => 0.82,
-            'products'       => ['Firefox', 'Focus', 'Fenix', 'Thunderbird',],
             'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
@@ -70,9 +76,9 @@ class Europe
         'RS' => [
             'name'           => 'Serbia',
             'languages'      => ['sr'],
+            'main_language'  => 'sr',
             'population'     => 6_698_024,
             'populationCore' => 0.79,
-            'products'       => ['Firefox', 'Focus', 'Fenix', 'Thunderbird',],
             'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
