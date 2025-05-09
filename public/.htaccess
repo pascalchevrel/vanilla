@@ -1,0 +1,84 @@
+# Rewrite all requests to the front controller
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #https://stackoverflow.com/questions/1329647/force-ssl-https-with-mod-rewrite/34065445#34065445
+    # If we receive a forwarded http request from a proxy...
+    RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+
+    # ...or just a plain old http request directly from the client
+    RewriteCond %{HTTP:X-Forwarded-Proto} =""
+    RewriteCond %{HTTPS} !=on
+
+    # Redirect to https version
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Put the rest of your rewrite rules here
+    RewriteBase /
+
+    # Existing files and folders are not redirected
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) /index.php [L,QSA]
+</IfModule>
+
+# Leverage browser cache
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                        "access plus 1 week"
+
+    ExpiresByType application/json        "access plus 0 seconds"
+    ExpiresByType text/html               "access plus 0 seconds"
+
+    ExpiresByType image/gif               "access plus 1 month"
+    ExpiresByType image/jpeg              "access plus 1 month"
+    ExpiresByType image/png               "access plus 1 month"
+    ExpiresByType image/svg+xml           "access plus 1 month"
+
+    ExpiresByType text/css                "access plus 1 year"
+    ExpiresByType application/font-woff   "access plus 1 year"
+    ExpiresByType application/javascript  "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    # Compress all output labeled with one of the following MIME-types
+    # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+    #  and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines
+    #  as `AddOutputFilterByType` is still in the core directives).
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+        AddOutputFilterByType DEFLATE application/x-font
+        AddOutputFilterByType DEFLATE application/x-font-opentype
+        AddOutputFilterByType DEFLATE application/x-font-otf
+        AddOutputFilterByType DEFLATE application/x-font-truetype
+        AddOutputFilterByType DEFLATE application/x-font-ttf
+        AddOutputFilterByType DEFLATE application/x-javascript
+        AddOutputFilterByType DEFLATE application/font-woff
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE font/opentype
+        AddOutputFilterByType DEFLATE font/otf
+        AddOutputFilterByType DEFLATE font/ttf
+        AddOutputFilterByType DEFLATE image/svg+xml
+        AddOutputFilterByType DEFLATE image/x-icon
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE text/javascript
+        AddOutputFilterByType DEFLATE text/plain
+        AddOutputFilterByType DEFLATE text/xml
+        AddOutputFilterByType DEFLATE text/html
+    </IfModule>
+
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
+    Header set X-Content-Type-Options: nosniff
+    Header set X-XSS-Protection: "1; mode=block"
+    Header set X-Frame-Options: DENY
+    Header always set Permissions-Policy: interest-cohort=()
+    Header always set Referrer-Policy "no-referrer"
+</IfModule>
+
