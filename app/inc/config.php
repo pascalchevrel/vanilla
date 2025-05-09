@@ -39,7 +39,20 @@ define('LOCALHOST',
     )
 );
 
-const PRODUCTION = ! LOCALHOST;
+define('STAGING',
+    ! is_null($http_host)
+    && $http_host === 'vanilla.pascalc.net'
+    && ! LOCALHOST
+);
+
+define('PRODUCTION',
+    ! LOCALHOST
+    && ! STAGING
+);
+
+var_dump(LOCALHOST);
+var_dump(STAGING);
+var_dump(PRODUCTION);
 
 // Define a Nonce for inline scripts
 define('NONCE', bin2hex(random_bytes(20)));
