@@ -1,17 +1,21 @@
 {% extends 'base.html.twig' %}
 {% block head_additions %}
-  {% set meta_description = 'This is the homepage' %}
-    <meta name="description" content="{{ meta_description }}">
+    {% set meta_description = 'This is the homepage' %}
+      <meta name="description" content="{{ meta_description }}">
 {% endblock %}
 
 
 {% block header %}
-  <h1 class="text-center fw-semibold">Vanilla project<br><small class="fs-4 fw-normal mt-0 pt-1">A study of Firefox in Sourthern Europe</small></h1>
+    <h1 class="text-center fw-semibold">Vanilla project<br><small class="fs-4 fw-normal mt-0 pt-1">A study of Firefox in Sourthern Europe</small></h1>
 {% endblock %}
 
 {% block main %}
 <table class="table table-sm w-75 justify-content-center">
-    <caption>All countries studied</caption>
+    <caption class="text-white">All countries studied:
+        {% for key, values in data.countries %}
+            <a href="/country/?code={{ key }}">{{ data.countries[key].name }}</a>{%  if not loop.last %}, {% else %}.{%  endif %}
+        {% endfor %}
+    </caption>
     <tbody>
         <tr>
             <th>Total population of countries studied:</th>

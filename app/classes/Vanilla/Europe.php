@@ -105,4 +105,15 @@ class Europe
 
         return (int) $market;
     }
+
+    public function getLocaleData(string $country) : array
+    {
+        $data = [];
+        foreach ($this->countries[$country]['languages'] as $locale) {
+            $data[$locale] = new FirefoxL10n($locale)->getLocale();
+        }
+
+        return $data;
+    }
+
 }
