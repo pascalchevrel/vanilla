@@ -45,7 +45,6 @@ class FirefoxL10n
 
     ];
 
-
     public array $european_locales = [
         'an', 'ast', 'be', 'bg',  'br', 'bs', 'ca', 'ca-valencia', 'cs', 'cy', 'da', 'de', 'dsb', 'el', 'en-GB', 'es-ES',
         'et', 'eu', 'fi', 'fr', 'fur', 'fy-NL', 'ga-IE', 'gd', 'gl', 'hr', 'hsb', 'hu', 'hy-AM', 'is', 'it', 'kk', 'lij',
@@ -73,8 +72,10 @@ class FirefoxL10n
         'gl'          => 'Galician',
         'hu'          => 'Hungarian',
         'id'          => 'Indonesian',
+        'it'          => 'Italian',
         'ja'          => 'Japanese',
         'ja-JP-mac'   => 'Japanese (mac)',
+        'lij'         => 'Ligurian',
         'lt'          => 'Lithuanian',
         'lv'          => 'Latvian',
         'mk'          => 'Macedonian',
@@ -93,14 +94,13 @@ class FirefoxL10n
         'zh-TW'       => 'Chinese (Traditional)',
     ];
 
-
-    protected array $euro_locales_with_dict;
+    public array $locales_with_dict;
 
     public function __construct(public string $locale = 'fr')
     {
-        $this->euro_locales_with_dict = array_intersect(
+        $this->locales_with_dict = array_intersect(
             $this->locales_with_dictionary,
-            $this->european_locales
+            $this->firefox_desktop_locales
         );
     }
 
@@ -112,7 +112,7 @@ class FirefoxL10n
         return [
             'code'       => $this->locale,
             'name'       => $this->locale_names[$this->locale],
-            'dictionary' => in_array($this->locale, $this->euro_locales_with_dict),
+            'dictionary' => in_array($this->locale, $this->locales_with_dict),
             'european'   => in_array($this->locale, $this->european_locales),
         ];
     }

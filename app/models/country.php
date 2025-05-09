@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Vanilla\Firefoxl10n;
 use \Vanilla\Europe;
 
 $europe = new Europe();

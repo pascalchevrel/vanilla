@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use \Framy\{Model, Template};
+use \Vanilla\FirefoxL10n;
 
 [$country, $europe] = new Model('country')->get();
 
@@ -13,5 +14,6 @@ new Template(
         'css_page_id'  => 'country',
         'country_code' => $country,
         'data'         => $europe,
+        'l10n'         => new FirefoxL10n(),
     ]
 )->render();

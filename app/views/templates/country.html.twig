@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block header %}
-    <h1><a href="/" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a></h1>
+    <nav class="fw-semibold fs-4"><a href="/" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a></nav>
 
     <h2 class="text-center">Country card: {{ data.countries[country_code].name }}</h2>
 {% endblock %}
@@ -34,6 +34,19 @@
                     title="{{ key }}"
                     {% if key == data.countries[country_code].main_language %} class="fw-semibold"{% endif %}
                 >{{ values.name }}</span>{% if not loop.last %} - {% endif %}
+            {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <th>Shipping with a dictionary</th>
+            <td>
+            {% for key, values in data.getLocaleData(country_code) %}
+                {% if key in l10n.locales_with_dict %}
+                <span
+                    title="{{ key }}"
+                    {% if key == data.countries[country_code].main_language %} class="fw-semibold"{% endif %}
+                >{{ values.name }}</span>{% if not loop.last %} - {% endif %}
+                    {% endif %}
             {% endfor %}
             </td>
         </tr>

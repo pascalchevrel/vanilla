@@ -19,7 +19,6 @@ class Europe
             'main_language'  => 'es-ES',
             'population'     => 47_893_887, // https://www.worldometers.info/world-population/europe-population/
             'populationCore' => 0.82, // Population age 10-75, various sources
-            'dictionary'     => true,
             'community'      => 'http://www.proyectonave.es/',
             'market_share'   => 0,
             'net_access'     => 0.9683, // Eurostat data https://tradingeconomics.com/romania/level-of-internet-access-eurostat-data.html
@@ -31,7 +30,6 @@ class Europe
             'main_language'  => 'el',
             'population'     => 9_959_557,
             'populationCore' => 0.8,
-            'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
             'net_access'     => 0.8689,
@@ -43,7 +41,6 @@ class Europe
             'main_language'  => 'it',
             'population'     => 59_153_758,
             'populationCore' => 0.78,
-            'dictionary'     => false,
             'community'      => 'https://www.mozillaitalia.org/',
             'market_share'   => 0,
             'net_access'     => 0.9341,
@@ -55,7 +52,6 @@ class Europe
             'main_language'  => 'pt-PT',
             'population'     => 10_414_399,
             'populationCore' => 0.78,
-            'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
             'net_access'     => 0.9060,
@@ -67,7 +63,6 @@ class Europe
             'main_language'  => 'ro',
             'population'     => 18_928_687,
             'populationCore' => 0.82,
-            'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
             'net_access'     => 0.9457,
@@ -79,7 +74,6 @@ class Europe
             'main_language'  => 'sr',
             'population'     => 6_698_024,
             'populationCore' => 0.79,
-            'dictionary'     => false,
             'community'      => '',
             'market_share'   => 0,
             'net_access'     => 0,
