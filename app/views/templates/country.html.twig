@@ -40,16 +40,24 @@
         <tr>
             <th>Shipping with a dictionary</th>
             <td>
+            {% set has_dict = false %}
             {% for key, values in data.getLocaleData(country_code) %}
                 {% if key in l10n.locales_with_dict %}
-                <span
-                    title="{{ key }}"
-                    {% if key == data.countries[country_code].main_language %} class="fw-semibold"{% endif %}
-                >{{ values.name }}</span>{% if not loop.last %} - {% endif %}
-                    {% endif %}
+                    {% set has_dict = true %}
+                    <span
+                        title="{{ key }}"
+                        {% if key == data.countries[country_code].main_language %} class="fw-semibold"{% endif %}
+                    >{{ values.name }}</span>{% if not loop.first %} - {% endif %}
+                {% endif %}
             {% endfor %}
+            {% if not has_dict %} No dictionary shipped with Firefox Desktop.{% endif %}
             </td>
         </tr>
+        <tr>
+            <th>{{ data.countries[country_code].name }} open bugs</th>
+            <td><a href="{{ open_bugs.url }}">{{ open_bugs.count }}</a></td>
+        </tr>
+
 
     </tbody>
 </table>

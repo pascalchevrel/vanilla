@@ -82,7 +82,7 @@ class FirefoxL10n
         'nl'          => 'Dutch',
         'pl'          => 'Polish',
         'pt-BR'       => 'Portuguese (Brasil)',
-        'pt-PT'       => 'Portuguese (Portugal)',
+        'pt-PT'       => 'Portuguese',
         'rm'          => 'Romantch',
         'ro'          => 'Romanian',
         'ru'          => 'Russian',
