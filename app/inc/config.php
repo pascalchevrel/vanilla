@@ -50,10 +50,6 @@ define('PRODUCTION',
     && ! STAGING
 );
 
-var_dump(LOCALHOST);
-var_dump(STAGING);
-var_dump(PRODUCTION);
-
 // Define a Nonce for inline scripts
 define('NONCE', bin2hex(random_bytes(20)));
 
