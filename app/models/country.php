@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Vanilla\Stats\Statcounter;
 use \Framy\Json;
 use \Vanilla\Europe;
 
@@ -21,8 +22,14 @@ $open_bugs = [
     'url'   => 'https://bugzilla.mozilla.org/buglist.cgi?' . $bz_query,
 ];
 
+$marketshare = new Statcounter($country)->getShare('2025', '04');
+$marketshare_previous = new Statcounter($country)->getShare('2024', '04');
+$marketshare_yoy = ($marketshare - $marketshare_previous) / $marketshare_previous;
+
 return [
     $country,
     $europe,
     $open_bugs,
+    $marketshare,
+    $marketshare_yoy
 ];

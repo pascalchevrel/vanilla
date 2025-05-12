@@ -74,6 +74,7 @@ th {
 
 td {
     color: var(--medium-color) !important;
+    text-align: right;
 }
 
 

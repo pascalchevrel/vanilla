@@ -81,7 +81,23 @@ class Json
             if (! file_exists($url)) {
                 return '';
             }
+            return file_get_contents($url);
         }
+
+       $options = [
+            'http' => [
+                'method'  => 'GET',
+                'header'  =>   "Content-Type: application/json\r\n"
+                             . "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0\r\n"
+                             . "Referer: https://vanilla.pascalc.net",
+            ],
+        ];
+
+        $data = file_get_contents(
+            $url,
+            false,
+            stream_context_create($options)
+        );
 
         return file_get_contents($url);
     }

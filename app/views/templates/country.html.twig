@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block main %}
-<table class="table table-sm w-75 justify-content-center">
+<table class="table table-sm w-50 justify-content-center">
     <tbody>
         <tr>
             <th>Population</th>
@@ -53,9 +53,21 @@
             {% if not has_dict %} No dictionary shipped with Firefox Desktop.{% endif %}
             </td>
         </tr>
+
         <tr>
             <th>{{ data.countries[country_code].name }} open bugs</th>
             <td><a href="{{ open_bugs.url }}">{{ open_bugs.count }}</a></td>
+        </tr>
+
+        <tr>
+            <th>Desktop market Share (Statcounter)</th>
+            <td>
+                {% if marketshare == 0 %}
+                N/A
+                {% else %}
+                    {{ (marketshare/100)|format_percent_number({rounding_mode: 'floor', fraction_digit: 2}) }} <small>({{ marketshare_yoy|format_percent_number({rounding_mode: 'floor', fraction_digit: 2}) }})</small>
+                {% endif %}
+        </td>
         </tr>
 
 
