@@ -10,7 +10,7 @@ class Europe
         The data should be revised regularly and depends on syncing with multiple online sources
         The data is known as correct at the date below.
     */
-    protected $data_stamp = '2025-05-06';
+    public string $data_stamp = '2025-05-06';
 
     public array $countries = [
         'ES' => [
