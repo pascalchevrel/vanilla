@@ -7,17 +7,14 @@ namespace Vanilla\Stats;
 /*
     This is Firefox data per country for Desktop from Statcounter
     https://gs.statcounter.com/browser-market-share/desktop/europe
+
+    There is a utility script in bin/getStatcounter.php that imports
+    the CSV file for a country and outputs it as an array in the terminal.
  */
 class Statcounter
 {
     protected $data_stamp = '2025-05-06';
 
-    /*
-        https://radar.cloudflare.com/charts/TopBrowsersXY/fetch?dateRange=52w&amp;location=es&limit=1000
-        https://api.cloudflare.com/client/v4/radar/http/top/browsers
-        Data only reachable in the browser behind a captcha.
-        There is a paying API with auth.
-     */
     public array $market_share = [
         'ES' => [
             '2024-04' => 7.21,

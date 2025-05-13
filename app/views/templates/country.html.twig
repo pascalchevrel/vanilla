@@ -67,10 +67,19 @@
                 {% else %}
                     {{ (marketshare/100)|format_percent_number({rounding_mode: 'floor', fraction_digit: 2}) }} <small>({{ marketshare_yoy|format_percent_number({rounding_mode: 'floor', fraction_digit: 2}) }})</small>
                 {% endif %}
-        </td>
+            </td>
         </tr>
 
-
+        <tr>
+            <th>Extrapolated user base (DAU)</th>
+            <td>
+                {% if marketshare == 0 %}
+                N/A
+                {% else %}
+                    {{ (marketshare/100*data.desktopPotentialMarket(country_code))|format_number({rounding_mode: 'floor', fraction_digit: 0}) }}
+                {% endif %}
+            </td>
+        </tr>
     </tbody>
 </table>
 
