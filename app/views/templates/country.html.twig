@@ -23,7 +23,7 @@
         {%  if data.countries[country_code].community != '' %}
         <tr>
             <th>Community site</th>
-            <td>{{ data.countries[country_code].community }}</td>
+            <td>{{ utils.HTMLlinkFromURL(data.countries[country_code].community)|raw }}</td>
         </tr>
         {%  endif %}
         <tr>
@@ -79,6 +79,10 @@
                     {{ (marketshare/100*data.desktopPotentialMarket(country_code))|format_number({rounding_mode: 'floor', fraction_digit: 0}) }}
                 {% endif %}
             </td>
+        </tr>
+        <tr>
+            <th>Cloudflare 2024 report</th>
+            <td><a href="{{ cloudflare.annualReportURL(country_code) }}">2024 report</a></td>
         </tr>
     </tbody>
 </table>

@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
+use Vanilla\Stats\Cloudflare;
 use Vanilla\Stats\Statcounter;
 use \Framy\Json;
 use \Vanilla\Europe;
+use \Vanilla\Utils;
 
 $europe = new Europe();
 $country = 'ES'; // Default to Spain
@@ -31,5 +33,7 @@ return [
     $europe,
     $open_bugs,
     $marketshare,
-    $marketshare_yoy
+    $marketshare_yoy,
+    new Cloudflare(),
+    new Utils(),
 ];

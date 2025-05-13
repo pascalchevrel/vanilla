@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use \Framy\{Model, Template};
-use \Vanilla\FirefoxL10n;
+use Framy\{Model, Template};
+use Vanilla\FirefoxL10n;
 
-[$country, $europe, $open_bugs, $marketshare, $marketshare_yoy] = new Model('country')->get();
+[$country, $europe, $open_bugs, $marketshare, $marketshare_yoy, $cloudflare, $utils] = new Model('country')->get();
 
 new Template(
     'country.html.twig',
@@ -18,5 +18,7 @@ new Template(
         'open_bugs'       => $open_bugs,
         'marketshare'     => $marketshare,
         'marketshare_yoy' => $marketshare_yoy,
+        'cloudflare'      => $cloudflare,
+        'utils'           => $utils,
     ]
 )->render();
