@@ -17,8 +17,9 @@ class Cloudflare
     public static $report = 'https://radar.cloudflare.com/year-in-review/';
 
     public function __construct() {}
+
     public static function annualReportURL(string $country_code, int $year = 2024): string
     {
-        return self::$report . (string) $year . '/' . strtolower($country_code);
+        return self::$report . (string) $year . '/' . strtolower($country_code) . '#browser-market-share';
     }
 }

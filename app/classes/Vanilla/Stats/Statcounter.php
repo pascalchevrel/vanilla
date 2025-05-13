@@ -108,13 +108,10 @@ class Statcounter
             ],
     ];
 
-    public function __construct(public string $country_code) {
-
-    }
+    public function __construct(public string $country_code) {}
 
     public function getShare(string $year, string $month) : float
     {
         return $this->market_share[$this->country_code]["{$year}-{$month}"] ?? 0;
     }
-
 }
