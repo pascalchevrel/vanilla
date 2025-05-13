@@ -11,4 +11,9 @@ class Utils
         return "<a {$opt_html} href=\"{$url}\">" . parse_url($url, PHP_URL_HOST) . "</a>";
     }
 
+    public static function devConfAgendaURL(string $country, string|null $year = null): string
+    {
+        return 'https://developers.events/#/' . ($year ??= date(Y)) . '/calendar?country=' . $country;
+    }
+
 }

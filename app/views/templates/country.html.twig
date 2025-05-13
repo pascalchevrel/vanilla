@@ -84,6 +84,11 @@
             <th>Cloudflare 2024 report</th>
             <td><a href="{{ cloudflare.annualReportURL(country_code) }}">2024 report</a></td>
         </tr>
+
+        <tr>
+            <th>Upcoming Tech Events</th>
+            <td><a href="{{ utils.devConfAgendaURL(data.countries[country_code].name, 'now' | date('Y')) }}">Tech Events</a></td>
+        </tr>
     </tbody>
 </table>
 
