@@ -19,193 +19,193 @@ class Dictionaries
         'locales' => [
             'bg' => [
                 'source'  => 'https://sourceforge.net/p/bgoffice/code/623/',
-                'licence' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version' => '4.4.0', // outdated
                 'note'    => 'https://sourceforge.net/p/bgoffice/code/HEAD/tree/trunk/Mozilla-spell-bg/ChangeLog',
             ],
             'br' => [
                 'source'  => 'https://drouizig.org/correcteur/hunspell-breton/',
-                'licence' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version' => '0.14',
                 'note'    => '',
             ],
             'ca' => [
                 'source'  => 'https://github.com/Softcatala/catalan-dict-tools',
-                'licence' => 'GPL-2.0 / LGPL-2.1',
+                'license' => 'GPL-2.0 / LGPL-2.1',
                 'version' => '2.5.0', // outdated
                 'note'    => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
             ],
             'da' => [
                 'source'  => 'https://stavekontrolden.dk/',
-                'licence' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version' => '2.7',
                 'note'    => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1776186',
             ],
             'el' => [
                 'source'  => 'https://addons.mozilla.org/fr/firefox/addon/greek-spellchecking-dictionary/',
-                'licence' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version' => '0.8.5.2',
                 'note'    => 'Development repo unknown',
             ],
             'en-CA' => [
                 'source'  => 'http://wordlist.aspell.net/',
-                'licence' => 'BSD',
+                'license' => 'BSD',
                 'version' => '2020.12.07',
                 'note'    => 'Same project source as en-US',
             ],
             'es-AR' => [
                 'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'licence' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version' => '2.8', // Outdated
                 'note'    => '',
             ],
             'es-CL' => [
                 'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'licence' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version' => '2.8',
                 'note'    => '',
             ],
             'es-ES' => [
                 'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'licence' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version' => '2.8',
                 'note'    => '',
             ],
             'es-MX' => [
                 'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'licence' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version' => '2.8',
                 'note'    => '',
             ],
             'et' => [
                 'source'  => 'http://extensions.services.openoffice.org/en/project/dict_et',
-                'licence' => 'LGPL-2.1',
+                'license' => 'LGPL-2.1',
                 'version' => '1.0', // Outdated
                 'note'    => 'Our version is from 2000, there seems to be a 2008 version',
             ],
             'fr' => [
-                'source'  => '',
-                'licence' => '',
-                'version' => '',
+                'source'  => 'https://grammalecte.net/#:~:text=MobileRead,Dictionnaires',
+                'license' => 'MPL-2.0',
+                'version' => '7.0',
                 'note'    => '',
             ],
             'fy-NL' => [
                 'source'  => '',
-                'licence' => '',
-                'version' => '',
+                'license' => '',
+                'version' => '20160722',
                 'note'    => '',
             ],
             'hu' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'id' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'ja' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'ku' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'lt' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'lv' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'mk' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'nl' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'pl' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'pt-BR' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'pt-PT' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'rm' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'ro' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'ru' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'sk' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'sr' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'sv-SE' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'uk' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
             'zh-TW' => [
                 'source'  => '',
-                'licence' => '',
+                'license' => '',
                 'version' => '',
                 'note'    => '',
             ],
@@ -226,12 +226,12 @@ class Dictionaries
         return in_array($locale, $this->supported_locales);
     }
     /**
-     * Get the licence(s) of a dictionary
+     * Get the license(s) of a dictionary
      */
-    public function getLicence(string $locale): string
+    public function getlicense(string $locale): string
     {
 
-        return $this->data['locales'][$locale]['licence'] ?? '';
+        return $this->data['locales'][$locale]['license'] ?? '';
     }
 
 }
