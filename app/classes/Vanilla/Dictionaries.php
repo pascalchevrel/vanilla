@@ -201,7 +201,7 @@ class Dictionaries
             ],
             'uk' => [
                 'source'  => 'https://github.com/brown-uk/dict_uk/releases',
-                'license' => 'Unclear',
+                'license' => '??',
                 'version' => '6.6.1',
                 'note'    => 'Not clear if the licence is GPL, partially MPL',
             ],
