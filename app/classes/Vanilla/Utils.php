@@ -6,8 +6,11 @@ namespace Vanilla;
 
 class Utils
 {
-    public static function HTMLlinkFromURL(string $url, string $opt_html = ''): string
+    public static function HTMLlinkFromURL(?string $url, string $opt_html = ''): string
     {
+        if (is_null($url)) {
+            return '';
+        }
         return "<a {$opt_html} href=\"{$url}\">" . parse_url($url, PHP_URL_HOST) . "</a>";
     }
 

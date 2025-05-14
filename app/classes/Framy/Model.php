@@ -14,8 +14,9 @@ readonly class Model
 
     public function __construct(public string $model) {
         $this->list = [
-            'home'    => 'home.php',
-            'country' => 'country.php',
+            'country'      => 'country.php',
+            'dictionaries' => 'dictionaries.php',
+            'home'         => 'home.php',
         ];
     }
 

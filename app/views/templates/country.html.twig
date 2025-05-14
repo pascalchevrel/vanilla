@@ -42,7 +42,7 @@
             <td>
             {% set has_dict = false %}
             {% for key, values in data.getLocaleData(country_code) %}
-                {% if key in l10n.locales_with_dict %}
+                {% if dict.supported(key) %}
                     {% set has_dict = true %}
                     <span
                         title="{{ key }}"

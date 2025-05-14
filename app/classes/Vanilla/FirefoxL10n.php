@@ -22,7 +22,7 @@ class FirefoxL10n
     protected $data_stamp = '2025-05-06';
 
     // Source: https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/browser/locales/shipped-locales
-    public array $firefox_desktop_locales = [
+    public array $desktop_locales_release = [
         'ach', 'af', 'an', 'ar', 'ast', 'az', 'be', 'bg', 'bn', 'br', 'bs', 'ca', 'ca-valencia', 'cak', 'cs', 'cy', 'da',
         'de', 'dsb', 'el', 'en-CA', 'en-GB', 'en-US', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et', 'eu', 'fa', 'ff',
         'fi', 'fr', 'fur', 'fy-NL', 'ga-IE', 'gd', 'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb', 'hu', 'hy-AM', 'ia',
@@ -32,12 +32,15 @@ class FirefoxL10n
         'uk', 'ur', 'uz', 'vi', 'xh', 'zh-CN', 'zh-TW',
     ];
 
-    // Source https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/mobile/android/locales/all-locales
-    public array $locales_with_dictionary = [
-        'bg', 'br', 'ca', 'da', 'el', 'en-CA', 'es-AR', 'es-CL', 'es-ES', 'es-MX',
-        'et', 'fr', 'fy-NL', 'hu', 'id', 'ja', 'ja-JP-mac', 'lt', 'lv', 'mk', 'nl',
-        'pl', 'pt-BR', 'pt-PT', 'rm', 'ro', 'ru', 'sk', 'sr', 'sv-SE', 'uk', 'vi',
-        'zh-TW',
+    // Source: https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/browser/locales/all-locales
+    public array $desktop_locales_all = [
+        'ach', 'af', 'an', 'ar', 'ast', 'az', 'be', 'bg', 'bn', 'bo', 'br', 'brx', 'bs', 'ca', 'ca-valencia', 'cak', 'ckb',
+        'cs', 'cy', 'da', 'de', 'dsb', 'el', 'en-CA', 'en-GB', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et', 'eu', 'fa', 'ff',
+        'fi', 'fr', 'fur', 'fy-NL', 'ga-IE', 'gd', 'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb', 'hu', 'hy-AM', 'hye', 'ia',
+        'id', 'is', 'it', 'ja', 'ja-JP-mac', 'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lo', 'lt', 'ltg', 'lv', 'meh', 'mk',
+        'ml', 'mr', 'ms', 'my', 'nb-NO', 'ne-NP', 'nl', 'nn-NO', 'oc', 'pa-IN', 'pl', 'pt-BR', 'pt-PT', 'rm', 'ro', 'ru', 'sat',
+        'sc', 'scn', 'sco', 'si', 'sk', 'skr', 'sl', 'son', 'sq', 'sr', 'sv-SE', 'szl', 'ta', 'te', 'tg', 'th', 'tl', 'tr',
+        'trs', 'uk', 'ur', 'uz', 'vi', 'wo', 'xh', 'zh-CN', 'zh-TW'
     ];
 
     // Source:
@@ -94,13 +97,13 @@ class FirefoxL10n
         'zh-TW'       => 'Chinese (Traditional)',
     ];
 
-    public array $locales_with_dict;
+    public array $desktop_locales_not_shipped;
 
     public function __construct(public string $locale = 'fr')
     {
-        $this->locales_with_dict = array_intersect(
-            $this->locales_with_dictionary,
-            $this->firefox_desktop_locales
+        $this->desktop_locales_not_shipped = array_diff(
+            $this->desktop_locales_all,
+            $this->desktop_locales_release
         );
     }
 
@@ -112,7 +115,7 @@ class FirefoxL10n
         return [
             'code'       => $this->locale,
             'name'       => $this->locale_names[$this->locale],
-            'dictionary' => in_array($this->locale, $this->locales_with_dict),
+            'dictionary' => new Dictionaries()->supported($this->locale),
             'european'   => in_array($this->locale, $this->european_locales),
         ];
     }

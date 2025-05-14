@@ -77,6 +77,11 @@ td {
     text-align: right;
 }
 
+#dictionaries th,
+#dictionaries td {
+    text-align: center;
+    text-align: center;
+}
 
 .table {
     margin: 0 auto;

@@ -70,9 +70,10 @@ class Request
     public function getController(): string
     {
         return match ($this->path) {
-            '/'         => 'home',
-            '/country/' => 'country',
-            default     => '404',
+            '/'              => 'home',
+            '/country/'      => 'country',
+            '/dictionaries/' => 'dictionaries',
+            default          => '404',
         };
     }
 

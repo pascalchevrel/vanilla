@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block head_additions %}
+    {% set meta_description = 'This is the homepage' %}
+      <meta name="description" content="{{ meta_description }}">
+{% endblock %}
+
+{% block header %}
+    <div  class="text-center fw-semibold">
+        <h2>{{ page_title }}</h2>
+        </div>
+{% endblock %}
+
+{% block main %}
+<table class="table table-sm w-50">
+    <tbody>
+        <tr>
+            <th>Code</th>
+            <th>Language</th>
+            <th>Dictionary</th>
+            <th>Version</th>
+            <th>Licence</th>
+            <th>Source</th>
+        </tr>
+
+        {% for locale in l10n.desktop_locales_all %}
+        <tr>
+            <th>{{ locale }}</th>
+            <td>{{ locale }}</td>
+            <td class="{{ dict.supported(locale) ? 'text-success-emphasis bg-info-subtle text-center' : '' }}"> {{ dict.supported(locale) ? 'yes' : '' }}</td>
+            <td>{{ dict.data['locales'][locale]['version'] }}</td>
+            <td>{{ dict.licence(locale) }}</td>
+            <td>{{ utils.HTMLlinkFromURL(dict.data['locales'][locale]['source'])|raw }}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
