@@ -135,8 +135,8 @@ class Dictionaries
             ],
             'mk' => [
                 'source'  => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
-                'license' => 'Public domain',
-                'version' => '??',
+                'license' => '',
+                'version' => 'Dead project, to be removed',
                 'note'    => '',
             ],
             'nl' => [
