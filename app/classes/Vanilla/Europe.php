@@ -15,7 +15,7 @@ class Europe
     public array $countries = [
         'ES' => [
             'name'             => 'Spain',
-            'languages'        => ['ast', 'ca', 'ca-valencia', 'es-ES',  'eu', 'gl',],
+            'languages'        => ['an', 'ast', 'ca', 'ca-valencia', 'es-ES',  'eu', 'gl',],
             'main_language'    => 'es-ES',
             'population'       => 47_893_887, // https://www.worldometers.info/world-population/europe-population/
             'populationCore'   => 0.83, // Population age 10-80, various sources from ChatGPT
@@ -37,7 +37,7 @@ class Europe
         ],
         'IT' => [
             'name'             => 'Italy',
-            'languages'        => ['it', 'lij'],
+            'languages'        => ['it', 'lij', 'scn'],
             'main_language'    => 'it',
             'population'       => 59_153_758,
             'populationCore'   => 0.82,

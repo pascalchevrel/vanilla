@@ -65,13 +65,14 @@ class FirefoxL10n
         'be'          => 'Belarusian',
         'bg'          => 'Bulgarian',
         'bn'          => 'Bengali',
+        'bo'          => 'Tibetan',
         'br'          => 'Breton',
         'brx'         => 'Bodo',
         'bs'          => 'Bosnian',
         'ca'          => 'Catalan',
         'ca-valencia' => 'Catalan (Valencian)',
         'cak'         => 'Kaqchikel',
-        'ckb'         => '', // needs update
+        'ckb'         => 'Central Kurdish', // needs update
         'cs'          => 'Czech',
         'cy'          => 'Welsh',
         'da'          => 'Danish',
@@ -103,7 +104,7 @@ class FirefoxL10n
         'hr'          => 'Croatian',
         'hsb'         => 'Upper Sorbian',
         'hy-AM'       => 'Armenian',
-        'hye'         => '', // needs update
+        'hye'         => 'Easter Armenian', // needs update
         'hu'          => 'Hungarian',
         'ia'          => 'Interlingua',
         'id'          => 'Indonesian',
@@ -142,7 +143,7 @@ class FirefoxL10n
         'ru'          => 'Russian',
         'sat'         => 'Santali',
         'sc'          => 'Sardinian',
-        'scn'         => '', // needs update
+        'scn'         => 'Sicilian', // needs update
         'sco'         => 'Scots',
         'si'          => 'Sinhala',
         'sk'          => 'Slovak',

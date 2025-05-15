@@ -1,18 +1,21 @@
 {% extends 'base.html.twig' %}
 {% block head_additions %}
     {% set meta_description = 'This is the homepage' %}
-      <meta name="description" content="{{ meta_description }}">
+    <meta name="description" content="{{ meta_description }}">
+    <link rel="stylesheet" href="/assets/js/sortable-tables.min.css" type="text/css" media="all">
+    <script src="/assets/js/sortable-tables.min.js"></script>
+
 {% endblock %}
 
 {% block header %}
-    <div  class="text-center fw-semibold">
+    <div  class="text-center fw-semibold">Nightly
         <h2>{{ page_title }}</h2>
         </div>
 {% endblock %}
 
 {% block main %}
-<table class="table table-sm w-75">
-    <tbody>
+<table class="table table-sm w-75 sortable-table">
+    <thead>
         <tr>
             <th>Code</th>
             <th>Language</th>
@@ -20,16 +23,26 @@
             <th>Version</th>
             <th>License</th>
             <th>Source</th>
-        </tr>
+            <th><img src="/assets/img/nightly_16.png" title="Nightly-only locale" alt="Nightly-only locale"></th>
 
+        </tr>
+    </thead>
+    <tbody>
         {% for locale in l10n.desktop_locales_all %}
         <tr>
-            <th>{{ locale }}</th>
+            <td>{{ locale }}</td>
             <td>{{ l10n.locale_names[locale] }}</td>
             <td class="{{ dict.supported(locale) ? 'text-success-emphasis bg-info-subtle text-center' : '' }}"> {{ dict.supported(locale) ? 'yes' : '' }}</td>
             <td>{{ dict.data['locales'][locale]['version'] }}</td>
             <td>{{ dict.license(locale) }}</td>
             <td>{{ utils.HTMLlinkFromURL(dict.data['locales'][locale]['source'])|raw }}</td>
+            <td>
+                {%- if locale in l10n.desktop_locales_not_shipped -%}
+                <img src="/assets/img/nightly_16.png" title="Nightly-only locale" alt="Nightly-only locale">
+                {%- else -%}
+                    &nbsp;
+                {%- endif -%}
+            </td>
 
         </tr>
         {% endfor %}
