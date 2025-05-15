@@ -17,7 +17,7 @@ class Dictionaries
         https://wiki.mozilla.org/L10n:Dictionaries
     */
     public array $data = [
-        'date'    => '2025-05-14',
+        'date'    => '2025-05-15',
         'locales' => [
             'bg' => [
                 'source'  => 'https://sourceforge.net/p/bgoffice/code/623/',
@@ -201,9 +201,9 @@ class Dictionaries
             ],
             'uk' => [
                 'source'  => 'https://github.com/brown-uk/dict_uk/releases',
-                'license' => '??',
+                'license' => 'GPL-3.0 / LGPL-2.1 / MPL-1.1',
                 'version' => '6.6.1',
-                'note'    => 'Not clear if the licence is GPL, partially MPL',
+                'note'    => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
             ],
             'zh-TW' => [
                 'source'  => 'http://wordlist.aspell.net/',
