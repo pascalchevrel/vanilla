@@ -134,10 +134,10 @@ class Dictionaries
                 'note'    => '',
             ],
             'mk' => [
-                'source'  => '??',
-                'license' => '??',
+                'source'  => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
+                'license' => 'Public domain',
                 'version' => '??',
-                'note'    => 'Where is this coming from?',
+                'note'    => '',
             ],
             'nl' => [
                 'source'  => 'https://github.com/OpenTaal/opentaal-hunspell',
