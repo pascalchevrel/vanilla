@@ -124,7 +124,8 @@ class Dictionaries
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
                 'version'  => '1.7 beta', // Outdated
-                'outdated' => Status::Yes,
+                'outdated' => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967288',
                 'note'     => '',
             ],
             'id' => [
