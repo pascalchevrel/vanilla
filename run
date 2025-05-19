@@ -6,7 +6,7 @@ ORANGE='\033[0;33m'
 BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
 
-SERVER="localhost:8082"
+SERVER="localhost:8083"
 
 SUPPORTED_COMMANDS=(
     '-help'
