@@ -9,8 +9,8 @@ enum Status: string
 {
     case Yes     = 'yes';
     case No      = 'no';
-    case Upgrade = 'upgrade in progress';
-    case Unknown = 'unkwown';
+    case Upgrade = 'upgrading';
+    case Unknown = 'unknown';
 }
 
 /**
