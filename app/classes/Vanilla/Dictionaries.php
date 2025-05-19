@@ -9,6 +9,7 @@ enum Status: string
 {
     case Yes     = 'yes';
     case No      = 'no';
+    case Upgrade = 'upgrade in progress';
     case Unknown = 'unkwown';
 }
 
@@ -31,8 +32,9 @@ class Dictionaries
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '4.4.0', // outdated
-                'outdated' => Status::Yes,
-                'note'     => 'https://sourceforge.net/p/bgoffice/code/HEAD/tree/trunk/Mozilla-spell-bg/ChangeLog',
+                'outdated' => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
             ],
             'br' => [
                 'source'   => 'https://drouizig.org/correcteur/hunspell-breton/',
@@ -274,10 +276,6 @@ class Dictionaries
     public function isOutdated(string $locale): bool
     {
         /* if we don't ship with a dictionary, it can't be outdated */
-        if (! $this->supported($locale)) {
-            return false;
-        }
-
         if (! $this->supported($locale)) {
             return false;
         }

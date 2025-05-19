@@ -36,11 +36,17 @@
             <td>{{ l10n.locale_names[locale] }}</td>
             <td><span class="{{ dict.supported(locale) ? 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center' : '' }}">{{ dict.supported(locale) ? 'yes' : '' }}</span></td>
             <td>{{ dict.data['locales'][locale]['version'] }}</td>
-            <td><span class="{{
-                dict.isOutdated(locale)
-                    ? 'd-block p-0 m-0 text-warning-emphasis bg-warning-subtle text-center'
-                    : 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center'
-                }}">{{ dict.data['locales'][locale]['outdated'].value }}</span></td>
+            <td>
+                {%- if dict.isOutdated(locale) -%}
+                   <span class="d-block p-0 m-0 text-warning-emphasis bg-warning-subtle text-center">{{ dict.data['locales'][locale]['outdated'].value }}</span>
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'no' -%}
+                    <span class="d-block p-0 m-0 text-success-emphasis bg-info-subtle text-center">{{ dict.data['locales'][locale]['outdated'].value }}</span>
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'upgrade in progress' -%}
+                    <span class="d-block p-0 m-0 text-info-emphasis bg-info-subtle text-center">
+                        <a class="link-success" href="{{ dict.data['locales'][locale]['bug'] }}">{{ dict.data['locales'][locale]['outdated'].value }}</a>
+                    </span>
+                {% endif %}
+            </td>
             <td>{{ dict.license(locale) }}</td>
             <td>{{ utils.HTMLlinkFromURL(dict.data['locales'][locale]['source'])|raw }}</td>
             <td>
