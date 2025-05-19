@@ -74,7 +74,7 @@ class Dictionaries
             'es-AR' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version'  => '2.8', // Outdated
+                'version'  => '2.8', // Outdated, 2.9
                 'outdated' => Status::Yes,
                 'note'     => '',
             ],
@@ -82,29 +82,29 @@ class Dictionaries
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::No,
+                'outdated' => Status::Yes,
                 'note'     => '',
             ],
             'es-ES' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::No,
+                'outdated' => Status::Yes,
                 'note'     => '',
             ],
             'es-MX' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::No,
+                'outdated' => Status::Yes,
                 'note'     => '',
             ],
             'et' => [
                 'source'   => 'http://extensions.services.openoffice.org/en/project/dict_et',
                 'license'  => 'LGPL-2.1',
                 'version'  => '1.0', // Outdated
-                'outdated' => Status::Yes,
-                'note'     => 'Our version is from 2000, there seems to be a 2008 version',
+                'outdated' => Status::No,
+                'note'     => 'The libreoffice version is the same, 282173 words',
             ],
             'fr' => [
                 'source'   => 'https://grammalecte.net/#:~:text=MobileRead,Dictionnaires',
