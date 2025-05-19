@@ -20,6 +20,7 @@
             <th>Language</th>
             <th>Dictionary</th>
             <th>Version</th>
+            <th>Outdated</th>
             <th>License</th>
             <th>Source</th>
             <th><img src="/assets/img/nightly_16.png" title="Nightly-only locale" alt="Nightly-only locale"></th>
@@ -31,8 +32,13 @@
         <tr>
             <td>{{ locale }}</td>
             <td>{{ l10n.locale_names[locale] }}</td>
-            <td class="{{ dict.supported(locale) ? 'text-success-emphasis bg-info-subtle text-center' : '' }}"> {{ dict.supported(locale) ? 'yes' : '' }}</td>
+            <td><span class="{{ dict.supported(locale) ? 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center' : '' }}">{{ dict.supported(locale) ? 'yes' : '' }}</span></td>
             <td>{{ dict.data['locales'][locale]['version'] }}</td>
+            <td><span class="{{
+                dict.isOutdated(locale)
+                    ? 'd-block p-0 m-0 text-warning-emphasis bg-warning-subtle text-center'
+                    : 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center'
+                }}">{{ dict.data['locales'][locale]['outdated'].value }}</span></td>
             <td>{{ dict.license(locale) }}</td>
             <td>{{ utils.HTMLlinkFromURL(dict.data['locales'][locale]['source'])|raw }}</td>
             <td>

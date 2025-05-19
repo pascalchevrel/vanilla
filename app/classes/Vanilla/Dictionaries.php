@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace Vanilla;
 
+
+enum Status: string
+{
+    case Yes     = 'yes';
+    case No      = 'no';
+    case Unknown = 'unkwown';
+}
+
 /**
  * This class contains all the uinformation we have about our shipping dictionaries
  */
@@ -20,196 +28,228 @@ class Dictionaries
         'date'    => '2025-05-15',
         'locales' => [
             'bg' => [
-                'source'  => 'https://sourceforge.net/p/bgoffice/code/623/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '4.4.0', // outdated
-                'note'    => 'https://sourceforge.net/p/bgoffice/code/HEAD/tree/trunk/Mozilla-spell-bg/ChangeLog',
+                'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '4.4.0', // outdated
+                'outdated' => Status::Yes,
+                'note'     => 'https://sourceforge.net/p/bgoffice/code/HEAD/tree/trunk/Mozilla-spell-bg/ChangeLog',
             ],
             'br' => [
-                'source'  => 'https://drouizig.org/correcteur/hunspell-breton/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '0.14',
-                'note'    => '',
+                'source'   => 'https://drouizig.org/correcteur/hunspell-breton/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '0.14',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'ca' => [
-                'source'  => 'https://github.com/Softcatala/catalan-dict-tools',
-                'license' => 'GPL-2.0 / LGPL-2.1',
-                'version' => '2.5.0', // outdated
-                'note'    => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
+                'source'   => 'https://github.com/Softcatala/catalan-dict-tools',
+                'license'  => 'GPL-2.0 / LGPL-2.1',
+                'version'  => '2.5.0', // outdated
+                'outdated' => Status::Yes,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
             ],
             'da' => [
-                'source'  => 'https://stavekontrolden.dk/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '2.7',
-                'note'    => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1776186',
+                'source'   => 'https://stavekontrolden.dk/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '2.7',
+                'outdated' => Status::No,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1776186',
             ],
             'el' => [
-                'source'  => 'https://addons.mozilla.org/fr/firefox/addon/greek-spellchecking-dictionary/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '0.8.5.2',
-                'note'    => 'Development repo unknown',
+                'source'   => 'https://addons.mozilla.org/fr/firefox/addon/greek-spellchecking-dictionary/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '0.8.5.2',
+                'outdated' => Status::No,
+                'note'     => 'Development repo unknown',
             ],
             'en-CA' => [
-                'source'  => 'http://wordlist.aspell.net/',
-                'license' => 'BSD',
-                'version' => '2020.12.07',
-                'note'    => 'Same project source as en-US',
+                'source'   => 'http://wordlist.aspell.net/',
+                'license'  => 'BSD',
+                'version'  => '2020.12.07',
+                'outdated' => Status::No,
+                'note'     => 'Same project source as en-US',
             ],
             'es-AR' => [
-                'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version' => '2.8', // Outdated
-                'note'    => '',
+                'source'   => 'https://github.com/sbosio/rla-es/releases',
+                'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'version'  => '2.8', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'es-CL' => [
-                'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version' => '2.8',
-                'note'    => '',
+                'source'   => 'https://github.com/sbosio/rla-es/releases',
+                'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'version'  => '2.8',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'es-ES' => [
-                'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version' => '2.8',
-                'note'    => '',
+                'source'   => 'https://github.com/sbosio/rla-es/releases',
+                'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'version'  => '2.8',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'es-MX' => [
-                'source'  => 'https://github.com/sbosio/rla-es/releases',
-                'license' => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version' => '2.8',
-                'note'    => '',
+                'source'   => 'https://github.com/sbosio/rla-es/releases',
+                'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
+                'version'  => '2.8',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'et' => [
-                'source'  => 'http://extensions.services.openoffice.org/en/project/dict_et',
-                'license' => 'LGPL-2.1',
-                'version' => '1.0', // Outdated
-                'note'    => 'Our version is from 2000, there seems to be a 2008 version',
+                'source'   => 'http://extensions.services.openoffice.org/en/project/dict_et',
+                'license'  => 'LGPL-2.1',
+                'version'  => '1.0', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => 'Our version is from 2000, there seems to be a 2008 version',
             ],
             'fr' => [
-                'source'  => 'https://grammalecte.net/#:~:text=MobileRead,Dictionnaires',
-                'license' => 'MPL-2.0',
-                'version' => '7.0',
-                'note'    => '',
+                'source'   => 'https://grammalecte.net/#:~:text=MobileRead,Dictionnaires',
+                'license'  => 'MPL-2.0',
+                'version'  => '7.0',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'fy-NL' => [
-                'source'  => 'http://www.fryslan.frl/14718/feroardering-oangeande-de-offisjele-stavering-fan-de-fryske-taal-2014/',
-                'license' => '',
-                'version' => '20160722',
-                'note'    => 'Dead project? No traces on the net. Is there an alternative?',
+                'source'   => 'http://www.fryslan.frl/14718/feroardering-oangeande-de-offisjele-stavering-fan-de-fryske-taal-2014/',
+                'license'  => '',
+                'version'  => '20160722',
+                'outdated' => Status::Unknown,
+                'note'     => 'Dead project? No traces on the net. Is there an alternative?',
             ],
             'hu' => [
-                'source'  => 'https://github.com/laszlonemeth/magyarispell/',
-                'license' => 'MPL-2.0 / LGPL-3.0',
-                'version' => '1.7 beta', // Outdated
-                'note'    => '',
+                'source'   => 'https://github.com/laszlonemeth/magyarispell/',
+                'license'  => 'MPL-2.0 / LGPL-3.0',
+                'version'  => '1.7 beta', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'id' => [
-                'source'  => '',
-                'license' => 'MPL-2.0 / LGPL-3.0',
-                'version' => '1.2', // Outdated
-                'note'    => '',
+                'source'   => '',
+                'license'  => 'MPL-2.0 / LGPL-3.0',
+                'version'  => '1.2', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'ja' => [
-                'source'  => 'http://wordlist.aspell.net/',
-                'license' => 'BSD',
-                'version' => '2020.12.07',
-                'note'    => 'Same project source as en-US',
+                'source'   => 'http://wordlist.aspell.net/',
+                'license'  => 'BSD',
+                'version'  => '2020.12.07',
+                'outdated' => Status::No,
+                'note'     => 'Same project source as en-US',
             ],
             'ku' => [
-                'source'  => 'Not found (was http://ferheng.org)',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '0.96',
-                'note'    => '',
+                'source'   => 'Not found (was http://ferheng.org)',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '0.96',
+                'outdated' => Status::Unknown,
+                'note'     => '',
             ],
             'lt' => [
-                'source'  => 'https://github.com/ispell-lt/ispell-lt/',
-                'license' => 'BSD',
-                'version' => '1.3.2',
-                'note'    => '',
+                'source'   => 'https://github.com/ispell-lt/ispell-lt/',
+                'license'  => 'BSD',
+                'version'  => '1.3.2',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'lv' => [
-                'source'  => 'https://github.com/wooorm/dictionaries/blob/main/dictionaries/lv/',
-                'license' => 'LGPL-2.1',
-                'version' => '1.1.0', // outdated
-                'note'    => '',
+                'source'   => 'https://github.com/wooorm/dictionaries/blob/main/dictionaries/lv/',
+                'license'  => 'LGPL-2.1',
+                'version'  => '1.1.0', // outdated
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'mk' => [
-                'source'  => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
-                'license' => '',
-                'version' => 'Dead project, to be removed',
-                'note'    => '',
+                'source'   => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
+                'license'  => '',
+                'version'  => 'Dead project, to be removed',
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'nl' => [
-                'source'  => 'https://github.com/OpenTaal/opentaal-hunspell',
-                'license' => 'BSD',
-                'version' => '2.20.19',
-                'note'    => '',
+                'source'   => 'https://github.com/OpenTaal/opentaal-hunspell',
+                'license'  => 'BSD',
+                'version'  => '2.20.19',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'pl' => [
-                'source'  => 'https://sjp.pl/sl/en/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '2017-10-30', // Outdated
-                'note'    => '',
+                'source'   => 'https://sjp.pl/sl/en/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '2017-10-30', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'pt-BR' => [
-                'source'  => 'https://addons.mozilla.org/pt-PT/firefox/addon/corretor/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '2018', // Outdated
-                'note'    => '',
+                'source'   => 'https://addons.mozilla.org/pt-PT/firefox/addon/corretor/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '2018', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'pt-PT' => [
-                'source'  => '',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '20.10.5.1',
-                'note'    => '',
+                'source'   => '',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '20.10.5.1',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'rm' => [
-                'source'  => 'www.liarumantscha.ch',
-                'license' => 'MIT',
-                'version' => '1.0',
-                'note'    => '',
+                'source'   => 'www.liarumantscha.ch',
+                'license'  => 'MIT',
+                'version'  => '1.0',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'ro' => [
-                'source'  => 'https://sourceforge.net/projects/rospell/files/Romanian%20dictionaries/',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '3.3.10',
-                'note'    => '',
+                'source'   => 'https://sourceforge.net/projects/rospell/files/Romanian%20dictionaries/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '3.3.10',
+                'outdated' => Status::No,
+                'note'     => '',
             ],
             'ru' => [
-                'source'  => 'https://bugzilla.mozilla.org/show_bug.cgi?id=451409',
-                'license' => 'Custom, see source',
-                'version' => '1.2', // outdated see https://code.google.com/archive/p/hunspell-ru/
-                'note'    => '',
+                'source'   => 'https://bugzilla.mozilla.org/show_bug.cgi?id=451409',
+                'license'  => 'Custom, see source',
+                'version'  => '1.2', // outdated see https://code.google.com/archive/p/hunspell-ru/
+                'outdated' => Status::Yes,
+                'note'     => '',
             ],
             'sk' => [
-                'source'  => 'https://spell.linux.sk/hunspell-sk',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '2.03-0, 2009-12-05',
-                'note'    => 'Dead project',
+                'source'   => 'https://spell.linux.sk/hunspell-sk',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '2.03-0, 2009-12-05',
+                'outdated' => Status::No,
+                'note'     => 'Dead project',
             ],
             'sr' => [
-                'source'  => '',
-                'license' => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '??',
-                'note'    => 'https://github.com/grakic/hunspell-sr?tab=readme-ov-file ?',
+                'source'   => '',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '??',
+                'outdated' => Status::Unknown,
+                'note'     => 'https://github.com/grakic/hunspell-sr?tab=readme-ov-file ?',
             ],
             'sv-SE' => [
-                'source'  => 'https://addons.mozilla.org/en-US/firefox/addon/g%C3%B6rans-hemmasnickrade-ordli/',
-                'license' => 'LGPL-3.0',
-                'version' => '2014', // Outdated
-                'note'    => 'https://bugzilla.mozilla.org/show_bug.cgi?id=962648',
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/g%C3%B6rans-hemmasnickrade-ordli/',
+                'license'  => 'LGPL-3.0',
+                'version'  => '2014', // Outdated
+                'outdated' => Status::Yes,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=962648',
             ],
             'uk' => [
-                'source'  => 'https://github.com/brown-uk/dict_uk/releases',
-                'license' => 'GPL-3.0 / LGPL-2.1 / MPL-1.1',
-                'version' => '6.6.1',
-                'note'    => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
+                'source'   => 'https://github.com/brown-uk/dict_uk/releases',
+                'license'  => 'GPL-3.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '6.6.1',
+                'outdated' => Status::No,
+                'note'     => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
             ],
             'zh-TW' => [
-                'source'  => 'http://wordlist.aspell.net/',
-                'license' => 'BSD',
-                'version' => '2018.04.16 en-US', //outdated
-                'note'    => 'Ships with en-US',
+                'source'   => 'http://wordlist.aspell.net/',
+                'license'  => 'BSD',
+                'version'  => '2018.04.16 en-US', //outdated
+                'outdated' => Status::Yes,
+                'note'     => 'Ships with en-US',
             ],
         ],
     ];
@@ -227,6 +267,25 @@ class Dictionaries
     {
         return in_array($locale, $this->supported_locales);
     }
+
+    /**
+     * Do we ship a dictionary for this locale
+     */
+    public function isOutdated(string $locale): bool
+    {
+        /* if we don't ship with a dictionary, it can't be outdated */
+        if (! $this->supported($locale)) {
+            return false;
+        }
+
+        if (! $this->supported($locale)) {
+            return false;
+        }
+
+        return $this->data['locales'][$locale]['outdated'] === Status::Yes;
+    }
+
+
     /**
      * Get the license(s) of a dictionary
      */
