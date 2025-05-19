@@ -25,7 +25,7 @@ class Dictionaries
         https://wiki.mozilla.org/L10n:Dictionaries
     */
     public array $data = [
-        'date'    => '2025-05-15',
+        'date'    => '2025-05-19',
         'locales' => [
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
@@ -144,7 +144,7 @@ class Dictionaries
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '0.96',
                 'outdated' => Status::Unknown,
-                'note'     => '',
+                'note'     => 'We don’t seem to still ship the ku locale, yet we still have the code in tree',
             ],
             'lt' => [
                 'source'   => 'https://github.com/ispell-lt/ispell-lt/',
@@ -269,7 +269,7 @@ class Dictionaries
     }
 
     /**
-     * Do we ship a dictionary for this locale
+     * Is the dictionary outdated
      */
     public function isOutdated(string $locale): bool
     {
@@ -285,14 +285,11 @@ class Dictionaries
         return $this->data['locales'][$locale]['outdated'] === Status::Yes;
     }
 
-
     /**
      * Get the license(s) of a dictionary
      */
     public function getlicense(string $locale): string
     {
-
         return $this->data['locales'][$locale]['license'] ?? '';
     }
-
 }
