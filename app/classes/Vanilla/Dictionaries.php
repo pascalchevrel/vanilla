@@ -33,7 +33,7 @@ class Dictionaries
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '4.4.3', // outdated
+                'version'  => '4.4.3',
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
@@ -48,16 +48,16 @@ class Dictionaries
             'ca' => [
                 'source'   => 'https://github.com/Softcatala/catalan-dict-tools/tags',
                 'license'  => 'GPL-2.0 / LGPL-2.1',
-                'version'  => '3.0.8', // outdated
-                'outdated' => Status::Upgrade,
+                'version'  => '3.0.9',
+                'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967443',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
             ],
             'da' => [
                 'source'   => 'https://stavekontrolden.dk/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2.7',
-                'outdated' => Status::Upgrade,
+                'version'  => '2.9',
+                'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967457',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1776186',
             ],
@@ -190,8 +190,8 @@ class Dictionaries
             'pl' => [
                 'source'   => 'https://sjp.pl/sl/en/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2017-10-30', // Outdated
-                'outdated' => Status::Upgrade,
+                'version'  => '2025-03-01',
+                'outdated' => Status::Updated,
                 'bug'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967435',
                 'note'     => '',
             ],
@@ -247,8 +247,9 @@ class Dictionaries
             'sv-SE' => [
                 'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/g%C3%B6rans-hemmasnickrade-ordli/',
                 'license'  => 'LGPL-3.0',
-                'version'  => '2014', // Outdated
-                'outdated' => Status::Yes,
+                'version'  => '1.21',
+                'outdated' => Status::Updated,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967541',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=962648',
             ],
             'uk' => [
