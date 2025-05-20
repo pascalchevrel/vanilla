@@ -26,7 +26,7 @@ class Dictionaries
         https://wiki.mozilla.org/L10n:Dictionaries
     */
     public array $data = [
-        'date'    => '2025-05-19',
+        'date'    => '2025-05-20',
         'locales' => [
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
@@ -75,29 +75,29 @@ class Dictionaries
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8', // Outdated, 2.9
-                'outdated' => Status::Yes,
-                'note'     => '',
+                'outdated' => Status::Upgrade,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967385',
             ],
             'es-CL' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::Yes,
-                'note'     => '',
+                'outdated' => Status::Upgrade,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967392',
             ],
             'es-ES' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::Yes,
-                'note'     => '',
+                'outdated' => Status::Upgrade,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967394',
             ],
             'es-MX' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::Yes,
-                'note'     => '',
+                'outdated' => Status::Upgrade,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967396',
             ],
             'et' => [
                 'source'   => 'http://extensions.services.openoffice.org/en/project/dict_et',
