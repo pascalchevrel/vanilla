@@ -33,7 +33,7 @@ class Dictionaries
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '4.4.0', // outdated
+                'version'  => '4.4.3', // outdated
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
@@ -56,8 +56,9 @@ class Dictionaries
             'da' => [
                 'source'   => 'https://stavekontrolden.dk/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2.7', // needs double checking with the .dic as the zip file upstream seems to imply 2.9
-                'outdated' => Status::Yes,
+                'version'  => '2.7',
+                'outdated' => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967457',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1776186',
             ],
             'el' => [
@@ -77,7 +78,7 @@ class Dictionaries
             'es-AR' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version'  => '2.8', // Outdated, 2.9
+                'version'  => '2.9',
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967385',
                 'note'     => '',
@@ -85,7 +86,7 @@ class Dictionaries
             'es-CL' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version'  => '2.8',
+                'version'  => '2.9',
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967392',
                 'note'     => '',
@@ -93,7 +94,7 @@ class Dictionaries
             'es-ES' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version'  => '2.8',
+                'version'  => '2.9',
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967394',
                 'note'     => '',
@@ -101,7 +102,7 @@ class Dictionaries
             'es-MX' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
-                'version'  => '2.8',
+                'version'  => '2.9',
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967396',
                 'note'     => '',
@@ -131,7 +132,7 @@ class Dictionaries
             'hu' => [
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
-                'version'  => '1.7 beta', // Outdated
+                'version'  => '1.8.1',
                 'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967288',
                 'note'     => '',
