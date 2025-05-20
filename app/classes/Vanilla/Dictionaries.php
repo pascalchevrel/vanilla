@@ -189,7 +189,8 @@ class Dictionaries
                 'source'   => 'https://sjp.pl/sl/en/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '2017-10-30', // Outdated
-                'outdated' => Status::Yes,
+                'outdated' => Status::Upgrade,
+                'bug'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967435',
                 'note'     => '',
             ],
             'pt-BR' => [
