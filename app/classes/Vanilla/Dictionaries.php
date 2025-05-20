@@ -7,10 +7,12 @@ namespace Vanilla;
 
 enum Status: string
 {
-    case Yes     = 'yes';
-    case No      = 'no';
-    case Upgrade = 'upgrading';
-    case Unknown = 'unknown';
+    case Yes     = 'Yes';
+    case No      = 'No';
+    case Removed = 'Removed in 2025';
+    case Upgrade = 'Upgrading';
+    case Updated = 'Updated in 2025';
+    case Unknown = 'Unknown';
 }
 
 /**
@@ -32,7 +34,7 @@ class Dictionaries
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '4.4.0', // outdated
-                'outdated' => Status::Upgrade,
+                'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
             ],
@@ -75,29 +77,33 @@ class Dictionaries
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8', // Outdated, 2.9
-                'outdated' => Status::Upgrade,
-                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967385',
+                'outdated' => Status::Updated,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967385',
+                'note'     => '',
             ],
             'es-CL' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::Upgrade,
-                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967392',
+                'outdated' => Status::Updated,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967392',
+                'note'     => '',
             ],
             'es-ES' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::Upgrade,
-                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967394',
+                'outdated' => Status::Updated,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967394',
+                'note'     => '',
             ],
             'es-MX' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
                 'license'  => 'GPL-3.0 / LGPL-3.0 / MPL-1.1',
                 'version'  => '2.8',
-                'outdated' => Status::Upgrade,
-                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967396',
+                'outdated' => Status::Updated,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967396',
+                'note'     => '',
             ],
             'et' => [
                 'source'   => 'http://extensions.services.openoffice.org/en/project/dict_et',
@@ -117,14 +123,15 @@ class Dictionaries
                 'source'   => 'http://www.fryslan.frl/14718/feroardering-oangeande-de-offisjele-stavering-fan-de-fryske-taal-2014/',
                 'license'  => '',
                 'version'  => '20160722',
-                'outdated' => Status::Unknown,
-                'note'     => 'Dead project? No traces on the net. Is there an alternative?',
+                'outdated' => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966678',
+                'note'     => 'Incompatible licence but in the process of relicencing to Apache 2.0',
             ],
             'hu' => [
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
                 'version'  => '1.7 beta', // Outdated
-                'outdated' => Status::Upgrade,
+                'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967288',
                 'note'     => '',
             ],
@@ -166,9 +173,10 @@ class Dictionaries
             'mk' => [
                 'source'   => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
                 'license'  => '',
-                'version'  => 'Dead project, to be removed',
-                'outdated' => Status::Yes,
-                'note'     => '',
+                'version'  => '',
+                'outdated' => Status::Removed,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966699',
+                'note'     => 'Removed for incompatible licence',
             ],
             'nl' => [
                 'source'   => 'https://github.com/OpenTaal/opentaal-hunspell',

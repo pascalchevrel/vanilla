@@ -34,19 +34,31 @@
         <tr>
             <td>{{ locale }}</td>
             <td>{{ l10n.locale_names[locale] }}</td>
-            <td><span class="{{ dict.supported(locale) ? 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center' : '' }}">{{ dict.supported(locale) ? 'yes' : '' }}</span></td>
+            <td><span class="{{ dict.supported(locale) ? 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center' : '' }}">{{ dict.supported(locale) ? 'Yes' : '' }}</span></td>
             <td>{{ dict.data['locales'][locale]['version'] }}</td>
             <td>{%- if dict.isOutdated(locale) -%}
                    <span class="d-block p-0 m-0 ps-1 pe-1 text-warning-emphasis bg-warning-subtle text-center">{{ dict.data['locales'][locale]['outdated'].value }}</span>
-                {%- elseif dict.data['locales'][locale]['outdated'].value == 'no' -%}
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'No' -%}
                     <span class="d-block p-0 m-0 ps-1 pe-1 text-success-emphasis bg-info-subtle text-center">{{ dict.data['locales'][locale]['outdated'].value }}</span>
-                {%- elseif dict.data['locales'][locale]['outdated'].value == 'upgrading' -%}
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'Updated in 2025' -%}
                     <a href="{{ dict.data['locales'][locale]['bug'] }}">
                         <span class="d-block p-0 m-0 ps-1 pe-1 text-info-emphasis bg-success-subtle text-center">
                             {{ dict.data['locales'][locale]['outdated'].value }}
                         </span>
                     </a>
-                {%- elseif dict.data['locales'][locale]['outdated'].value == 'unknown' -%}
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'Upgrading' -%}
+                    <a href="{{ dict.data['locales'][locale]['bug'] }}">
+                        <span class="d-block p-0 m-0 ps-1 pe-1 text-info-emphasis bg-success-subtle text-center">
+                            {{ dict.data['locales'][locale]['outdated'].value }}
+                        </span>
+                    </a>
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'Removed in 2025' -%}
+                    <a href="{{ dict.data['locales'][locale]['bug'] }}">
+                        <span class="d-block p-0 m-0 ps-1 pe-1 text-info-emphasis bg-success-subtle text-center">
+                            {{ dict.data['locales'][locale]['outdated'].value }}
+                        </span>
+                    </a>
+                {%- elseif dict.data['locales'][locale]['outdated'].value == 'Unknown' -%}
                     <span class="d-block p-0 m-0 ps-1 pe-1 text-success-emphasis bg-secondary-subtle text-center">{{ dict.data['locales'][locale]['outdated'].value }}</span>
                 {%- endif -%}</td>
             <td>{{ dict.license(locale) }}</td>
