@@ -56,8 +56,8 @@ class Dictionaries
             'da' => [
                 'source'   => 'https://stavekontrolden.dk/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2.7',
-                'outdated' => Status::No,
+                'version'  => '2.7', // needs double checking with the .dic as the zip file upstream seems to imply 2.9
+                'outdated' => Status::Yes,
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1776186',
             ],
             'el' => [
