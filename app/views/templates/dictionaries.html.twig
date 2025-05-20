@@ -33,7 +33,7 @@
         {# We don't ship Kurdish but we do have a compatible dictionary in tree, let's keep an eye on it for completeness #}
         {% for locale in l10n.desktop_locales_all|merge(['ku'])|sort %}
         <tr>
-            <td id="{{ locale }}">{{ locale }}</td>
+            <td id="{{ locale }}"><a href="#{{ locale }}" class="bi-link-45deg anchor-link link-info"></a>{{ locale }}</td>
             <td>{{ l10n.locale_names[locale] }}</td>
             <td><span class="{{ dict.supported(locale) ? 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center' : '' }}">{{ dict.supported(locale) ? 'Yes' : '' }}</span></td>
             <td>{{ dict.data['locales'][locale]['version'] }}</td>
