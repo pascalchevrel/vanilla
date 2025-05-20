@@ -198,9 +198,9 @@ class Dictionaries
             'pt-BR' => [
                 'source'   => 'https://addons.mozilla.org/pt-PT/firefox/addon/corretor/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2018', // Outdated
-                'outdated' => Status::Yes,
-                'note'     => '',
+                'version'  => '123.2024.16.151', // alt dict? https://pt-br.libreoffice.org/projetos/vero
+                'outdated' => Status::No,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1874992',
             ],
             'pt-PT' => [
                 'source'   => '',
