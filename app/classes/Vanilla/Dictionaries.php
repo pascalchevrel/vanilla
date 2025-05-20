@@ -46,10 +46,11 @@ class Dictionaries
                 'note'     => '',
             ],
             'ca' => [
-                'source'   => 'https://github.com/Softcatala/catalan-dict-tools',
+                'source'   => 'https://github.com/Softcatala/catalan-dict-tools/tags',
                 'license'  => 'GPL-2.0 / LGPL-2.1',
-                'version'  => '2.5.0', // outdated
-                'outdated' => Status::Yes,
+                'version'  => '3.0.8', // outdated
+                'outdated' => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967443',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
             ],
             'da' => [
