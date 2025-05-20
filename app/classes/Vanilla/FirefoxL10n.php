@@ -118,6 +118,7 @@ class FirefoxL10n
         'km'          => 'Khmer',
         'kn'          => 'Kannada',
         'ko'          => 'Korean',
+        'ku'          => 'Kurdish',
         'lij'         => 'Ligurian',
         'lo'          => 'Lao',
         'lt'          => 'Lithuanian',

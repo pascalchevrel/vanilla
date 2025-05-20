@@ -150,11 +150,11 @@ class Dictionaries
                 'note'     => 'Same project source as en-US',
             ],
             'ku' => [
-                'source'   => 'Not found (was http://ferheng.org)',
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/rastniv%C3%AEs/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '0.96',
                 'outdated' => Status::Unknown,
-                'note'     => 'We don’t seem to still ship the ku locale, yet we still have the code in tree',
+                'note'     => 'We don’t seem to still ship the ku locale, yet we still have the code in tree.',
             ],
             'lt' => [
                 'source'   => 'https://github.com/ispell-lt/ispell-lt/',
@@ -276,6 +276,10 @@ class Dictionaries
      */
     public function supported(string $locale): bool
     {
+        if ($locale === 'ku') {
+            /* We don't ship Firefox in Kurdish anymore but we still have the dictionary ion tree */
+            return true;
+        }
         return in_array($locale, $this->supported_locales);
     }
 

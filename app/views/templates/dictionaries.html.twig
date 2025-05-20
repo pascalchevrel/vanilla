@@ -11,7 +11,7 @@
     <nav class="fw-semibold fs-4"><a href="/" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a></nav>
     <h2 class="text-center">{{ page_title }}</h2>
     {# We have a Kurdish dictionary in tree yet we don’t ship this locale, so we remove one #}
-    <h3 class="text-center">{{ dict.data['locales']|length - 1 }} locales ship with a built-in dictionary</h3>
+    <h3 class="text-center">{{ dict.data['locales']|length }} locales ship with a built-in dictionary</h3>
 {% endblock %}
 
 {% block main %}
@@ -30,9 +30,10 @@
         </tr>
     </thead>
     <tbody>
-        {% for locale in l10n.desktop_locales_all %}
+        {# We don't ship Kurdish but we do have a compatible dictionary in tree, let's keep an eye on it for completeness #}
+        {% for locale in l10n.desktop_locales_all|merge(['ku'])|sort %}
         <tr>
-            <td>{{ locale }}</td>
+            <td id="{{ locale }}">{{ locale }}</td>
             <td>{{ l10n.locale_names[locale] }}</td>
             <td><span class="{{ dict.supported(locale) ? 'd-block p-0 m-0 text-success-emphasis bg-info-subtle text-center' : '' }}">{{ dict.supported(locale) ? 'Yes' : '' }}</span></td>
             <td>{{ dict.data['locales'][locale]['version'] }}</td>
@@ -66,8 +67,10 @@
             <td>
                 {%- if locale in l10n.desktop_locales_not_shipped -%}
                 <img src="/assets/img/nightly_16.png" title="Nightly-only locale" alt="Nightly-only locale">
+                {%- elseif locale  == 'ku' -%}
+                <img src="/assets/img/nightly_16.png" class="grayscale" title="We don't ship Kurdish on any channel" alt="Nightly-only locale">
                 {%- else -%}
-                    &nbsp;
+                &nbsp;
                 {%- endif -%}
             </td>
 
