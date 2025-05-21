@@ -172,7 +172,7 @@ class Dictionaries
                 'source'   => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
                 'license'  => '',
                 'version'  => '',
-                'outdated' => Status::Removed,
+                'outdated' => Status::Removed2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966699',
                 'note'     => 'Removed for incompatible licence',
             ],
@@ -255,6 +255,14 @@ class Dictionaries
                 'outdated' => Status::OK,
                 'note'     => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
             ],
+            'vi' => [
+                'source'   => '',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::Removed2024,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1912392',
+                'note'     => '',
+            ],
             'zh-TW' => [
                 'source'   => 'http://wordlist.aspell.net/',
                 'license'  => 'BSD',
@@ -280,6 +288,15 @@ class Dictionaries
             /* We don't ship Firefox in Kurdish anymore but we still have the dictionary ion tree */
             return true;
         }
+
+        /* If if was removed then return false */
+        if (in_array($locale, $this->supported_locales))  {
+            if ($this->data['locales'][$locale]['outdated'] === Status::Removed2024
+                || $this->data['locales'][$locale]['outdated'] === Status::Removed2025 ) {
+                return false;
+            }
+        }
+
         return in_array($locale, $this->supported_locales);
     }
 
