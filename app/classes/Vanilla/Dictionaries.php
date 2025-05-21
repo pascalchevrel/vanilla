@@ -18,6 +18,14 @@ class Dictionaries
     public array $data = [
         'date'    => '2025-05-21',
         'locales' => [
+            'ar' => [
+                'source'   => '',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::Candidate,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967733',
+                'note'     => '',
+            ],
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
@@ -280,6 +288,21 @@ class Dictionaries
         $this->supported_locales = array_keys($this->data['locales']);
     }
 
+
+    public function getSupportedLocales() : array
+    {
+        $arr = [];
+        // var_dump(array_keys($this->data['locales']));die;
+        foreach (array_keys($this->data['locales']) as $locale) {
+            if ($this->supported($locale)) {
+            // die($locale);
+                $arr[] = $locale;
+            }
+        }
+
+        return $arr;
+    }
+
     /**
      * Do we ship a dictionary for this locale
      */
@@ -292,8 +315,11 @@ class Dictionaries
 
         /* If if was removed then return false */
         if (in_array($locale, $this->supported_locales))  {
-            if ($this->data['locales'][$locale]['outdated'] === Status::Removed2024
-                || $this->data['locales'][$locale]['outdated'] === Status::Removed2025 ) {
+            if (
+                $this->data['locales'][$locale]['outdated'] === Status::Removed2024
+                || $this->data['locales'][$locale]['outdated'] === Status::Removed2025
+                || $this->data['locales'][$locale]['outdated'] === Status::Candidate
+            ) {
                 return false;
             }
         }

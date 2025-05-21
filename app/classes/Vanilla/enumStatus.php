@@ -10,5 +10,6 @@ enum enumStatus: string
     case Removed2025 = 'Removed in 2025';
     case Upgrade     = 'Upgrading';
     case Updated     = 'Updated in 2025';
+    case Candidate   = 'Dictionary candidate';
     case Unknown     = 'Unknown';
 }
