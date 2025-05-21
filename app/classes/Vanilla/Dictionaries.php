@@ -156,8 +156,8 @@ class Dictionaries
             'lv' => [
                 'source'   => 'https://dict.dv.lv/download.php?prj=lv',
                 'license'  => 'LGPL-2.1',
-                'version'  => '1.1.0',
-                'outdated' => Status::Upgrade,
+                'version'  => '1.4.0',
+                'outdated' => Status::No,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967651',
                 'note'     => '',
             ],
