@@ -16,7 +16,7 @@ class Dictionaries
         https://wiki.mozilla.org/L10n:Dictionaries
     */
     public array $data = [
-        'date'    => '2025-05-20',
+        'date'    => '2025-05-21',
         'locales' => [
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
@@ -30,7 +30,7 @@ class Dictionaries
                 'source'   => 'https://drouizig.org/correcteur/hunspell-breton/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '0.14',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'ca' => [
@@ -53,14 +53,14 @@ class Dictionaries
                 'source'   => 'https://addons.mozilla.org/fr/firefox/addon/greek-spellchecking-dictionary/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '0.8.5.2',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'Development repo unknown',
             ],
             'en-CA' => [
                 'source'   => 'http://wordlist.aspell.net/',
                 'license'  => 'BSD',
                 'version'  => '2020.12.07',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
             ],
             'es-AR' => [
@@ -99,14 +99,14 @@ class Dictionaries
                 'source'   => 'http://extensions.services.openoffice.org/en/project/dict_et',
                 'license'  => 'LGPL-2.1',
                 'version'  => '1.0', // Outdated
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'The libreoffice version is the same, 282173 words',
             ],
             'fr' => [
                 'source'   => 'https://grammalecte.net/#:~:text=MobileRead,Dictionnaires',
                 'license'  => 'MPL-2.0',
                 'version'  => '7.0',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'fy-NL' => [
@@ -129,14 +129,14 @@ class Dictionaries
                 'source'   => '',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
                 'version'  => '1.2', // Outdated
-                'outdated' => Status::Yes,
+                'outdated' => Status::Outdated,
                 'note'     => '',
             ],
             'ja' => [
                 'source'   => 'http://wordlist.aspell.net/',
                 'license'  => 'BSD',
                 'version'  => '2020.12.07',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
             ],
             'ku' => [
@@ -150,14 +150,14 @@ class Dictionaries
                 'source'   => 'https://github.com/ispell-lt/ispell-lt/',
                 'license'  => 'BSD',
                 'version'  => '1.3.2',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'lv' => [
                 'source'   => 'https://dict.dv.lv/download.php?prj=lv',
                 'license'  => 'LGPL-2.1',
                 'version'  => '1.4.0',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967651',
                 'note'     => '',
             ],
@@ -173,7 +173,7 @@ class Dictionaries
                 'source'   => 'https://github.com/OpenTaal/opentaal-hunspell',
                 'license'  => 'BSD',
                 'version'  => '2.20.19',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'pl' => [
@@ -188,42 +188,42 @@ class Dictionaries
                 'source'   => 'https://addons.mozilla.org/pt-PT/firefox/addon/corretor/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '123.2024.16.151', // alt dict? https://pt-br.libreoffice.org/projetos/vero
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1874992',
             ],
             'pt-PT' => [
                 'source'   => '',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '20.10.5.1',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'rm' => [
                 'source'   => 'www.liarumantscha.ch',
                 'license'  => 'MIT',
                 'version'  => '1.0',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'ro' => [
                 'source'   => 'https://sourceforge.net/projects/rospell/files/Romanian%20dictionaries/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '3.3.10',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => '',
             ],
             'ru' => [
                 'source'   => 'https://bugzilla.mozilla.org/show_bug.cgi?id=451409',
                 'license'  => 'Custom, see source',
                 'version'  => '1.2', // outdated see https://code.google.com/archive/p/hunspell-ru/
-                'outdated' => Status::Yes,
+                'outdated' => Status::Outdated,
                 'note'     => '',
             ],
             'sk' => [
                 'source'   => 'https://spell.linux.sk/hunspell-sk',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '2.03-0, 2009-12-05',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'Dead project',
             ],
             'sr' => [
@@ -245,14 +245,14 @@ class Dictionaries
                 'source'   => 'https://github.com/brown-uk/dict_uk/releases',
                 'license'  => 'GPL-3.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '6.6.1',
-                'outdated' => Status::No,
+                'outdated' => Status::OK,
                 'note'     => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
             ],
             'zh-TW' => [
                 'source'   => 'http://wordlist.aspell.net/',
                 'license'  => 'BSD',
                 'version'  => '2018.04.16 en-US', //outdated
-                'outdated' => Status::Yes,
+                'outdated' => Status::Outdated,
                 'note'     => 'Ships with en-US',
             ],
         ],
@@ -286,7 +286,7 @@ class Dictionaries
             return false;
         }
 
-        return $this->data['locales'][$locale]['outdated'] === Status::Yes;
+        return $this->data['locales'][$locale]['outdated'] === Status::Outdated;
     }
 
     /**
