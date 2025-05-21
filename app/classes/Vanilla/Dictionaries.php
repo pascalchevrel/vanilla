@@ -1,22 +1,10 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Vanilla;
-
-
-enum Status: string
-{
-    case Yes     = 'Yes';
-    case No      = 'No';
-    case Removed = 'Removed in 2025';
-    case Upgrade = 'Upgrading';
-    case Updated = 'Updated in 2025';
-    case Unknown = 'Unknown';
-}
+use Vanilla\enumStatus as Status;
 
 /**
- * This class contains all the uinformation we have about our shipping dictionaries
+ * This class contains all the information we have about our shipping dictionaries
  */
 class Dictionaries
 {
@@ -166,10 +154,11 @@ class Dictionaries
                 'note'     => '',
             ],
             'lv' => [
-                'source'   => 'https://github.com/wooorm/dictionaries/blob/main/dictionaries/lv/',
+                'source'   => 'https://dict.dv.lv/download.php?prj=lv',
                 'license'  => 'LGPL-2.1',
-                'version'  => '1.1.0', // outdated
-                'outdated' => Status::Yes,
+                'version'  => '1.1.0',
+                'outdated' => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967651',
                 'note'     => '',
             ],
             'mk' => [
