@@ -49,6 +49,14 @@ class Dictionaries
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967443',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
             ],
+            'ca-valencia' => [
+                'source'   => '',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::Candidate,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967778',
+                'note'     => '',
+            ],
             'da' => [
                 'source'   => 'https://stavekontrolden.dk/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
