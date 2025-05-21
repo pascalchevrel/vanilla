@@ -139,6 +139,13 @@ class Dictionaries
                 'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
             ],
+            'ja-JP-mac' => [
+                'source'   => 'http://wordlist.aspell.net/',
+                'license'  => 'BSD',
+                'version'  => '2020.12.07',
+                'outdated' => Status::OK,
+                'note'     => 'Same project source as en-US',
+            ],
             'ku' => [
                 'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/rastniv%C3%AEs/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
@@ -251,9 +258,9 @@ class Dictionaries
             'zh-TW' => [
                 'source'   => 'http://wordlist.aspell.net/',
                 'license'  => 'BSD',
-                'version'  => '2018.04.16 en-US', //outdated
-                'outdated' => Status::Outdated,
-                'note'     => 'Ships with en-US',
+                'version'  => '2020.12.07',
+                'outdated' => Status::OK,
+                'note'     => 'Same project source as en-US',
             ],
         ],
     ];
