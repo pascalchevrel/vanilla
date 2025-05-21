@@ -52,8 +52,8 @@ class Dictionaries
             'el' => [
                 'source'   => 'https://addons.mozilla.org/fr/firefox/addon/greek-spellchecking-dictionary/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '0.8.5.2',
-                'outdated' => Status::Upgrade,
+                'version'  => '0.9',
+                'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967704',
                 'note'     => 'https://github.com/stevestavropoulos/elspell/commit/df4b4a3b7ba04c99aaabbff34f1bfa183844ff8b',
             ],
