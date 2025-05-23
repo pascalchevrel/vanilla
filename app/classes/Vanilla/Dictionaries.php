@@ -211,9 +211,9 @@ class Dictionaries
             'pt-BR' => [
                 'source'   => 'https://addons.mozilla.org/pt-PT/firefox/addon/corretor/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '123.2024.16.151', // alt dict? https://pt-br.libreoffice.org/projetos/vero
-                'outdated' => Status::OK,
-                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1874992',
+                'version'  => '140.2025.142.1267', // alt dict? https://pt-br.libreoffice.org/projetos/vero
+                'outdated' => Status::Updated,
+                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1968153',
             ],
             'pt-PT' => [
                 'source'   => '',
