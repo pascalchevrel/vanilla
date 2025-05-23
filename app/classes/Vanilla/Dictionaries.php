@@ -128,11 +128,11 @@ class Dictionaries
             ],
             'fy-NL' => [
                 'source'   => 'http://www.fryslan.frl/14718/feroardering-oangeande-de-offisjele-stavering-fan-de-fryske-taal-2014/',
-                'license'  => '',
+                'license'  => 'Apache 2.0',
                 'version'  => '20160722',
-                'outdated' => Status::Upgrade,
+                'outdated' => Status::Updated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966678',
-                'note'     => 'Incompatible licence but in the process of relicencing to Apache 2.0',
+                'note'     => 'Incompatible licence but relicenced to Apache 2.0',
             ],
             'hu' => [
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
