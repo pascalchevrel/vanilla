@@ -19,12 +19,12 @@ class Dictionaries
         'date'    => '2025-05-21',
         'locales' => [
             'ar' => [
-                'source'   => '',
-                'license'  => '',
-                'version'  => '',
+                'source'   => 'https://github.com/linuxscout/ayaspell/',
+                'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
+                'version'  => '3.7',
                 'outdated' => Status::Candidate,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967733',
-                'note'     => '',
+                'note'     => 'Not developed anymore but the only one available on the market with a tri-licence',
             ],
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
