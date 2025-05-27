@@ -11,5 +11,6 @@ enum enumStatus: string
     case Upgrade     = 'Upgrading';
     case Updated     = 'Updated in 2025';
     case Candidate   = 'Dictionary candidate';
+    case Added2025   = 'Added in 2025';
     case Unknown     = 'Unknown';
 }

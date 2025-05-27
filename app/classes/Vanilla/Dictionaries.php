@@ -22,7 +22,7 @@ class Dictionaries
                 'source'   => 'https://github.com/linuxscout/ayaspell/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '3.7',
-                'outdated' => Status::Candidate,
+                'outdated' => Status::Added2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967733',
                 'note'     => 'Not developed anymore but the only one available on the market with a tri-licence',
             ],
