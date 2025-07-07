@@ -16,7 +16,7 @@ class Dictionaries
         https://wiki.mozilla.org/L10n:Dictionaries
     */
     public array $data = [
-        'date'    => '2025-05-21',
+        'date'    => '2025-07-07',
         'locales' => [
             'ar' => [
                 'source'   => 'https://github.com/linuxscout/ayaspell/',
@@ -50,10 +50,10 @@ class Dictionaries
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910',
             ],
             'ca-valencia' => [
-                'source'   => '',
-                'license'  => '',
-                'version'  => '',
-                'outdated' => Status::Candidate,
+                'source'   => 'https://github.com/Softcatala/catalan-dict-tools/tags',
+                'license'  => 'GPL-2.0 / LGPL-2.1',
+                'version'  => '3.0.9',
+                'outdated' => Status::Added2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967778',
                 'note'     => '',
             ],
