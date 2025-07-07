@@ -2,8 +2,7 @@
 {% block head_additions %}
     {% set meta_description = 'This is the homepage' %}
     <meta name="description" content="{{ meta_description }}">
-    <link rel="stylesheet" href="/assets/js/sortable-tables.min.css" type="text/css" media="all">
-    <script src="/assets/js/sortable-tables.min.js"></script>
+    <script src="/assets/js/tablesort.min.js"></script>
 
 {% endblock %}
 
@@ -15,14 +14,14 @@
 {% endblock %}
 
 {% block main %}
-<table class="table table-sm w-100 sortable-table">
+<table class="table table-sm w-100" id="dictionariesTable">
     <thead>
         <tr>
             <th>Code</th>
             <th>Language</th>
             <th>Dictionary</th>
             <th>Version</th>
-            <th>Outdated</th>
+            <th data-sort-reverse data-sort-default>Outdated</th>
             <th>License</th>
             <th>Source</th>
             <th><img src="/assets/img/nightly_16.png" title="Nightly-only locale" alt="Nightly-only locale"></th>
@@ -116,4 +115,11 @@
 
 {% block footer %}
     <footer class="d-flex justify-content-center">Data last updated: {{ dict.data.date }}</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Tablesort(document.getElementById('dictionariesTable'), {
+              descending: false
+            });
+        });
+    </script>
 {% endblock %}
