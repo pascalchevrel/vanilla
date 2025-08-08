@@ -44,6 +44,17 @@ class World
             'desktop_access'   => 0.48,
             'bugzilla_keyword' => 'italy',
         ],
+        'JP' => [
+            'name'             => 'Japan',
+            'languages'        => ['ja'],
+            'main_language'    => 'ja',
+            'population'       => 125_035_689,
+            'populationCore'   => 0.85,
+            'community'        => 'https://www.mozilla.jp/',
+            'net_access'       => 0.95,  // roughly
+            'desktop_access'   => 0.4,  // roughly
+            'bugzilla_keyword' => 'japan',
+        ],
         'PT' => [
             'name'             => 'Portugal',
             'languages'        => ['pt-PT'],

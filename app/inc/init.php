@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use Framy\Request;
-
 // Allow http resources when ran locally in tests
 $https_only = LOCALHOST ? '' : 'default-src https:;';
 

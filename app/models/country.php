@@ -34,7 +34,7 @@ $fixed_bugs = [
 
 $marketshare = new Statcounter($country)->getShare('2025', '04');
 $marketshare_previous = new Statcounter($country)->getShare('2024', '04');
-$marketshare_yoy = ($marketshare - $marketshare_previous) / $marketshare_previous;
+$marketshare_yoy = $marketshare_previous != 0 ? ($marketshare - $marketshare_previous) / $marketshare_previous : 'N/A' ;
 
 return [
     $country,
