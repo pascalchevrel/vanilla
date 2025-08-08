@@ -11,7 +11,7 @@ use Framy\{Model, Template};
 new Template(
     'home.html.twig',
     [
-        'page_title'  => 'Make Firefox in Europe Great Again',
+        'page_title'  => 'Make Firefox in Europe Amazing',
         'css_page_id' => 'homepage',
         'message'     => 'Hello',
         'data'        => $data,
