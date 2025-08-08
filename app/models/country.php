@@ -5,22 +5,22 @@ declare(strict_types=1);
 use Vanilla\Stats\Cloudflare;
 use Vanilla\Stats\Statcounter;
 use \Framy\Json;
-use \Vanilla\Europe;
+use \Vanilla\World;
 use \Vanilla\Utils;
 
-$europe = new Europe();
+$world = new world();
 $country = 'ES'; // Default to Spain
 
-if (isset($_GET['code']) && in_array($_GET['code'], array_keys($europe->countries))) {
+if (isset($_GET['code']) && in_array($_GET['code'], array_keys($world->countries))) {
     $country = $_GET['code'];
 }
 
 $bz_rest  = 'https://bugzilla.mozilla.org/rest/bug?';
 $bz_query_open = 'bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&keywords_type=allwords&keywords='
-    . $europe->countries[$country]['bugzilla_keyword'];
+    . $world->countries[$country]['bugzilla_keyword'];
 
 $bz_query_fixed = 'keywords_type=allwords&keywords='
-    . $europe->countries[$country]['bugzilla_keyword'];
+    . $world->countries[$country]['bugzilla_keyword'];
 
 $open_bugs = [
     'count' => Json::load($bz_rest . $bz_query_open . '&count_only=1')['bug_count'],
@@ -38,7 +38,7 @@ $marketshare_yoy = ($marketshare - $marketshare_previous) / $marketshare_previou
 
 return [
     $country,
-    $europe,
+    $world,
     $open_bugs,
     $fixed_bugs,
     $marketshare,

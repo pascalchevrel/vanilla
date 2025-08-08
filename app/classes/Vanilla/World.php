@@ -2,7 +2,7 @@
 
 namespace Vanilla;
 
-class Europe
+class World
 {
     /*
         The data should be revised regularly and depends on syncing with multiple online sources

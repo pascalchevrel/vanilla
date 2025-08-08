@@ -7,7 +7,7 @@
 {% block header %}
     <div  class="text-center fw-semibold">
         <h1>Vanilla project</h1>
-        <h2>A study of Firefox in Sourthern Europe</h2>
+        <h2>Consolidation of data about Firefox in specific countries</h2>
         <h3>Countries studied:
         {% for key, values in data.countries %}
             <a href="/country/?code={{ key }}">{{ data.countries[key].name }}</a>{%  if not loop.last %}, {% else %}.{%  endif %}

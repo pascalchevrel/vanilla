@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-use \Vanilla\Europe;
+use \Vanilla\World;
 
-return [new Europe()];
+return [new World()];
