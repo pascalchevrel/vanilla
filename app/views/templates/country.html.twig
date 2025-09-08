@@ -9,6 +9,7 @@
     <h2 class="text-center">Country card: {{ data.countries[country_code].name }}</h2>
 {% endblock %}
 
+
 {% block main %}
 <table class="table table-sm w-50 justify-content-center">
     <tbody>
@@ -96,6 +97,20 @@
     </tbody>
 </table>
 
+{% if fx_features %}
+<h2 class="text-center">Regional Firefox Preferences activated</h2>
+<table class="table table-sm w-50 justify-content-center">
+    <tbody>
+    {% for pref,value in fx_features %}
+
+        <tr>
+            <th>{{ pref }}</th>
+            <td>{{ valuie }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
 
 {% endblock %}
 

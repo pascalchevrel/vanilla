@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
+use Framy\Json;
 use Vanilla\Stats\Cloudflare;
 use Vanilla\Stats\Statcounter;
-use \Framy\Json;
-use \Vanilla\World;
-use \Vanilla\Utils;
+use Vanilla\World;
+use Vanilla\Utils;
+use Vanilla\FirefoxPrefs;
 
 $world = new world();
 $country = 'ES'; // Default to Spain
@@ -36,6 +37,11 @@ $marketshare = new Statcounter($country)->getShare('2025', '04');
 $marketshare_previous = new Statcounter($country)->getShare('2024', '04');
 $marketshare_yoy = $marketshare_previous != 0 ? ($marketshare - $marketshare_previous) / $marketshare_previous : 'N/A' ;
 
+$activated_features = array_filter(
+    new FirefoxPrefs()->getRegionalPrefs(),
+    fn($s) => str_contains($s, $country) || str_contains($s, $world->countries[$country]['main_language'])
+);
+
 return [
     $country,
     $world,
@@ -45,4 +51,5 @@ return [
     $marketshare_yoy,
     new Cloudflare(),
     new Utils(),
+    $activated_features,
 ];
