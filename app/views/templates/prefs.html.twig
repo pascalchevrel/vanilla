@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block head_additions %}
+    <meta name="description" content="{{ data.country.country_code }}">
+{% endblock %}
+
+{% block header %}
+    <nav class="fw-semibold fs-4"><a href="/" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a></nav>
+{% endblock %}
+
+{% block main %}
+
+
+<h2 class="text-center">Regional Firefox Preferences activated by default</h2>
+<table class="table table-sm w-100 justify-content-center">
+    <tbody>
+        <tr>
+        <th>Pref</th>
+    {% for country_code in countries %}
+        <th class="text-center">{{ country_code }}</th>
+    {% endfor %}
+        </tr>
+
+    {% for pref, values in fx_features %}
+        <tr>
+            <th>{{ pref }}</th>
+            {% for country_code in countries %}
+                {% set match = '' %}
+                {% if country_code in fx_features[pref] %}
+                    {% set match = 'bg-info' %}
+                {% endif %}
+                <td class="text-center {{ match }}"></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    <tr>
+        <th>Total: </th>
+       {% for country_code in countries %}
+        <td class="text-center">{{ total_per_country[country_code] }}</td>
+        {% endfor %}
+    </tr>
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

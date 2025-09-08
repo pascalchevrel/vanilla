@@ -98,14 +98,12 @@
 </table>
 
 {% if fx_features %}
-<h2 class="text-center">Regional Firefox Preferences activated</h2>
+<h2 class="text-center">Regional Firefox Preferences activated by default</h2>
 <table class="table table-sm w-50 justify-content-center">
     <tbody>
     {% for pref,value in fx_features %}
-
         <tr>
             <th>{{ pref }}</th>
-            <td>{{ valuie }}</td>
         </tr>
     {% endfor %}
     </tbody>

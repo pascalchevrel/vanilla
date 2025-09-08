@@ -57,6 +57,8 @@ class FirefoxPrefs
     */
     public function getRegionalPrefs(): array
     {
-        return array_filter($this->parse(), fn($a) => str_contains($a, 'US,'));
+        $data = array_filter($this->parse(), fn($a) => str_contains($a, 'US,'));
+        ksort($data);
+        return $data;
     }
 }

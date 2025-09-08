@@ -17,6 +17,7 @@ readonly class Model
             'country'      => 'country.php',
             'dictionaries' => 'dictionaries.php',
             'home'         => 'home.php',
+            'prefs'        => 'prefs.php',
         ];
     }
 

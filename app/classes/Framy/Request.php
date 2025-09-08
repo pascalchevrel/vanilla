@@ -73,6 +73,7 @@ class Request
             '/'              => 'home',
             '/country/'      => 'country',
             '/dictionaries/' => 'dictionaries',
+            '/prefs/'        => 'prefs',
             default          => '404',
         };
     }
