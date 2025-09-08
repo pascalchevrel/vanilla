@@ -14,10 +14,11 @@
 <table class="table table-sm w-100 justify-content-center">
     <tbody>
         <tr>
-        <th>Pref</th>
-    {% for country_code in countries %}
-        <th class="text-center">{{ country_code }}</th>
-    {% endfor %}
+            <th>Pref</th>
+            {% for country_code in countries %}
+            <th class="text-center">{{ country_code }}</th>
+            {% endfor %}
+            <th class="text-center">Total</th>
         </tr>
 
     {% for pref, values in fx_features %}
@@ -26,17 +27,20 @@
             {% for country_code in countries %}
                 {% set match = '' %}
                 {% if country_code in fx_features[pref] %}
-                    {% set match = 'bg-info' %}
+                    {% set match = 'bg-info border border-light' %}
                 {% endif %}
                 <td class="text-center {{ match }}"></td>
             {% endfor %}
+            <td class="text-center">{{ values|length }}</td>
+
         </tr>
     {% endfor %}
     <tr>
         <th>Total: </th>
-       {% for country_code in countries %}
+        {% for country_code in countries %}
         <td class="text-center">{{ total_per_country[country_code] }}</td>
         {% endfor %}
+        <td class="text-center"></td>
     </tr>
     </tbody>
 </table>
