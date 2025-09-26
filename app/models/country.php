@@ -20,7 +20,7 @@ $bz_rest  = 'https://bugzilla.mozilla.org/rest/bug?';
 $bz_query_open = 'bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&keywords_type=allwords&keywords='
     . $world->countries[$country]['bugzilla_keyword'];
 
-$bz_query_fixed = 'keywords_type=allwords&keywords='
+$bz_query_fixed = 'bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&keywords_type=allwords&keywords='
     . $world->countries[$country]['bugzilla_keyword'];
 
 $open_bugs = [

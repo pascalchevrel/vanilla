@@ -6,7 +6,9 @@ use Framy\Json;
 use Vanilla\World;
 use Vanilla\Utils;
 use Vanilla\FirefoxPrefs;
+use Vanilla\NimbusPrefs;
 
+/*  FIREFOX PREFS SECTION */
 $world = new world();
 $activated_features = new FirefoxPrefs()->getRegionalPrefs();
 $locale_countries_matrix = [
@@ -58,6 +60,9 @@ foreach ($activated_countries as $code) {
         }
     }
 }
+/*  NIMBUS PREFS SECTION */
+// $nimbus = new NimbusPrefs()->parse();
+
 
 return [
     $world,

@@ -8,7 +8,7 @@ class World
         The data should be revised regularly and depends on syncing with multiple online sources
         The data is known as correct at the date below.
     */
-    public string $data_stamp = '2025-05-13';
+    public string $data_stamp = '2025-09-26';
 
     public array $countries = [
         'ES' => [
@@ -21,6 +21,18 @@ class World
             'net_access'       => 0.9683, // Eurostat data https://tradingeconomics.com/romania/level-of-internet-access-eurostat-data.html
             'desktop_access'   => 0.53,
             'bugzilla_keyword' => 'spain',
+        ],
+        'ET' => [
+            'name'             => 'Estonia',
+            'languages'        => ['et'],
+            'main_language'    => 'et',
+            'population'       => 1_340_359, // https://www.worldometers.info/world-population/europe-population/
+            'populationCore'   => 0.85, // Population age 10-80, various sources from ChatGPT
+            'community'        => 'http://mozilla.pingviin.org/',
+            'net_access'       => 0.929, // Eurostat data https://tradingeconomics.com/romania/level-of-internet-access-eurostat-data.html
+            'desktop_access'   => 0.53,
+            'bugzilla_keyword' => 'estonia',
+            'last_updated'     => '2025-09-26',
         ],
         'GR' => [
             'name'             => 'Greece',
