@@ -48,7 +48,7 @@
                     <span
                         title="{{ key }}"
                         {% if key == data.countries[country_code].main_language %} class="fw-semibold"{% endif %}
-                    >{{ values.name }}</span>{% if not loop.first %} - {% endif %}
+                    >{{ values.name }}</span>{% if not loop.last %} - {% endif %}
                 {% endif %}
             {% endfor %}
             {% if not has_dict %} No dictionary shipped with Firefox Desktop.{% endif %}

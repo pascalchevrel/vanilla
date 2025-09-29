@@ -45,6 +45,18 @@ class World
             'desktop_access'   => 0.45,
             'bugzilla_keyword' => 'greece',
         ],
+        'NL' => [
+            'name'             => 'Netherlands',
+            'languages'        => ['nl', 'fy-NL'],
+            'main_language'    => 'nl',
+            'population'       => 18_376_070,
+            'populationCore'   => 0.88,
+            'community'        => '',
+            'net_access'       => 0.9904,
+            'desktop_access'   => 0.80,
+            'bugzilla_keyword' => 'netherlands',
+            'last_updated'     => '2025-09-29',
+        ],
         'IT' => [
             'name'             => 'Italy',
             'languages'        => ['it', 'lij', 'scn'],
