@@ -17,11 +17,13 @@ if (isset($_GET['code']) && in_array($_GET['code'], array_keys($world->countries
 }
 
 $bz_rest  = 'https://bugzilla.mozilla.org/rest/bug?';
-$bz_query_open = 'bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&keywords_type=allwords&keywords='
-    . $world->countries[$country]['bugzilla_keyword'];
-
-$bz_query_fixed = 'bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&keywords_type=allwords&keywords='
-    . $world->countries[$country]['bugzilla_keyword'];
+$keywords = '&keywords_type=anywords&keywords=' . $world->countries[$country]['bugzilla_keyword'];
+/* We have an historical Japan specific keyword: jp-critical */
+if ($country == 'JP') {
+    $keywords .= ',jp-critical';
+}
+$bz_query_open = 'bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED' . $keywords;
+$bz_query_fixed = 'bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED' . $keywords;
 
 $open_bugs = [
     'count' => Json::load($bz_rest . $bz_query_open . '&count_only=1')['bug_count'],
