@@ -9,9 +9,10 @@ NORMAL=$(tput sgr0)
 SERVER="localhost:8089"
 
 SUPPORTED_COMMANDS=(
-    '-help'
-    '-tests'
-    '-browser-sync'
+    'help'
+    'tests'
+    'browser-sync'
+
 )
 
 function ctrl_c() {
@@ -34,17 +35,17 @@ then
     done
     if [ "${supported_command}" = false ];
     then
-        echo -e "Unknown parameter ${ORANGE}${BOLD}${1}${NORMAL}${NOCOLOR}. Type ${GREEN}${BOLD}run -help${NORMAL} to know what the valid parameters are."
+        echo -e "Unknown parameter ${ORANGE}${BOLD}${1}${NORMAL}${NOCOLOR}. Type ${GREEN}${BOLD}./run help${NORMAL} to know what the valid parameters are."
         exit 1
     fi
 fi
 
-if [ $# -gt 0 ] && [ $1 = '-help' ]
+if [ $# -gt 0 ] && [ $1 = 'help' ]
 then
     echo -e "${ORANGE}${BOLD}Usage:${NORMAL}${NOCOLOR}"
     echo -e " ${BOLD}run${NORMAL}               Starts the PHP web server and listen to localhost:8082"
-    echo -e " ${BOLD}run -tests${NORMAL}        Runs application test suite"
-    echo -e " ${BOLD}run -browser-sync${NORMAL}    Run with browser-sync"
+    echo -e " ${BOLD}run tests${NORMAL}         Runs application test suite"
+    echo -e " ${BOLD}run browser-sync${NORMAL}  Run with browser-sync"
     echo ""
     echo "Additional parameters will be ignored."
     exit 1
