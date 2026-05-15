@@ -19,7 +19,7 @@ new Template(
         'l10n'        => $l10n,
         'europe'      => $europe,
         'dict'        => $dictionaries,
-        'utils'           => $utils,
+        'utils'       => $utils,
 
     ]
 )->render();
