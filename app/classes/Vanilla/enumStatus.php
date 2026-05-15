@@ -6,7 +6,7 @@ enum enumStatus: string
 {
     case OK           = 'Up to date';
     case Outdated     = 'Outdated';
-    case Imcompatible = 'Incompatible license';
+    case Incompatible = 'Incompatible license';
     case Removed2024  = 'Removed in 2024';
     case Removed2025  = 'Removed in 2025';
     case Upgrade      = 'Upgrading';
@@ -16,4 +16,5 @@ enum enumStatus: string
     case Added2025    = 'Added in 2025';
     case Added2026    = 'Added in 2026';
     case Unknown      = 'Unknown';
+    case WIP          = 'Work in progress';
 }

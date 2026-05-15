@@ -57,6 +57,14 @@ class Dictionaries
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967778. No update in May 2026.',
                 'note'     => '',
             ],
+            'cy' => [
+                'source'   => 'https://github.com/techiaith/hunspell-cy',
+                'license'  => 'LGPL-3.0',
+                'version'  => '25.03',
+                'outdated' => Status::WIP,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040025',
+                'note'     => '',
+            ],
             'da' => [
                 'source'   => 'https://stavekontrolden.dk/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
@@ -169,7 +177,7 @@ class Dictionaries
                 'source'   => 'https://github.com/spellcheck-ko/hunspell-dict-ko',
                 'license'  => 'GPL-3.0',
                 'version'  => '',
-                'outdated' => Status::Imcompatible,
+                'outdated' => Status::Incompatible,
                 'note'     => '.aff and .dic files are GPL 3. Only project found for Korean.',
             ],
             'ku' => [
@@ -304,16 +312,16 @@ class Dictionaries
 
     public function __construct() {
         $this->supported_locales = array_keys($this->data['locales']);
+        // Manually remove some locales for now
+        $this->supported_locales = array_diff($this->supported_locales, ['cy', 'mk', 'vi', 'ko']);
     }
 
 
     public function getSupportedLocales() : array
     {
         $arr = [];
-        // var_dump(array_keys($this->data['locales']));die;
         foreach (array_keys($this->data['locales']) as $locale) {
             if ($this->supported($locale)) {
-            // die($locale);
                 $arr[] = $locale;
             }
         }
