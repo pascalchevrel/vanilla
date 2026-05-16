@@ -113,6 +113,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967392',
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'es-ES' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
@@ -410,5 +411,12 @@ class Dictionaries
     public function getlicense(string $locale): string
     {
         return $this->data['locales'][$locale]['license'] ?? '';
+    }
+    /**
+     * Get the Last check of a dictionary
+     */
+    public function lastChecked(string $locale): string
+    {
+        return $this->data['locales'][$locale]['checked'] ?? '';
     }
 }
