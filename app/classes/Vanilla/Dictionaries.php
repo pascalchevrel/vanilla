@@ -25,14 +25,16 @@ class Dictionaries
                 'outdated' => Status::Added2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967733',
                 'note'     => 'Not developed anymore but the only one available on the market with a tri-licence. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'bg' => [
                 'source'   => 'https://sourceforge.net/p/bgoffice/code/623/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '4.4.3',
-                'outdated' => Status::Updated2025,
-                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967258',
-                'note'     => 'Update in progress https://bugzilla.mozilla.org/show_bug.cgi?id=2039850',
+                'version'  => '4.4.5',
+                'outdated' => Status::Updated2026,
+                'bug'      => 'ttps://bugzilla.mozilla.org/show_bug.cgi?id=2039850',
+                'note'     => '',
+                'checked'  => '2026-04',
             ],
             'br' => [
                 'source'   => 'https://drouizig.org/correcteur/hunspell-breton/',
@@ -40,6 +42,7 @@ class Dictionaries
                 'version'  => '0.14',
                 'outdated' => Status::OK,
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'ca' => [
                 'source'   => 'https://github.com/Softcatala/catalan-dict-tools/tags',
@@ -48,6 +51,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967443',
                 'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=919910. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'ca-valencia' => [
                 'source'   => 'https://github.com/Softcatala/catalan-dict-tools/tags',
@@ -56,22 +60,25 @@ class Dictionaries
                 'outdated' => Status::Added2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967778. No update in May 2026.',
                 'note'     => '',
+                'checked'  => '2026-04',
             ],
             'cy' => [
                 'source'   => 'https://github.com/techiaith/hunspell-cy',
                 'license'  => 'LGPL-3.0',
                 'version'  => '25.03',
-                'outdated' => Status::WIP,
+                'outdated' => Status::Added2026,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040025',
                 'note'     => '',
+                'checked'  => '2026-04',
             ],
             'da' => [
                 'source'   => 'https://stavekontrolden.dk/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2.9',
-                'outdated' => Status::Updated2025,
-                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967457',
-                'note'     => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039848. Update in progress.',
+                'version'  => '2.9.097',
+                'outdated' => Status::Updated2026,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039848',
+                'note'     => '',
+                'checked'  => '2026-04',
             ],
             'el' => [
                 'source'   => 'https://addons.mozilla.org/fr/firefox/addon/greek-spellchecking-dictionary/',
@@ -80,6 +87,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967704',
                 'note'     => 'https://github.com/stevestavropoulos/elspell/commit/df4b4a3b7ba04c99aaabbff34f1bfa183844ff8b. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'en-CA' => [
                 'source'   => 'http://wordlist.aspell.net/',
@@ -87,6 +95,7 @@ class Dictionaries
                 'version'  => '2020.12.07',
                 'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
+                'checked'  => '2026-04',
             ],
             'es-AR' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
@@ -95,6 +104,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967385',
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'es-CL' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
@@ -111,6 +121,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967394',
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'es-MX' => [
                 'source'   => 'https://github.com/sbosio/rla-es/releases',
@@ -119,6 +130,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967396',
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'et' => [
                 'source'   => 'http://extensions.services.openoffice.org/en/project/dict_et',
@@ -126,14 +138,16 @@ class Dictionaries
                 'version'  => '1.0', // Outdated
                 'outdated' => Status::OK,
                 'note'     => 'Dead project. No update in May 2026. The libreoffice version is the same, 282173 words',
+                'checked'  => '2026-04',
             ],
             'fr' => [
                 'source'   => 'https://grammalecte.net/#:~:text=MobileRead,Dictionnaires',
                 'license'  => 'MPL-2.0',
-                'version'  => '7.0',
-                'outdated' => Status::OK,
-                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1681167',
-                'note'     => 'Update in progress https://bugzilla.mozilla.org/show_bug.cgi?id=20398981',
+                'version'  => '7.7',
+                'outdated' => Status::Updated2026,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039898',
+                'note'     => 'Dictionary: "Toutes variantes"',
+                'checked'  => '2026-04',
             ],
             'fy-NL' => [
                 'source'   => 'http://www.fryslan.frl/14718/feroardering-oangeande-de-offisjele-stavering-fan-de-fryske-taal-2014/',
@@ -142,22 +156,25 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966678',
                 'note'     => 'Incompatible licence but relicenced to Apache 2.0. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'hu' => [
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
-                'version'  => '1.8.1',
-                'outdated' => Status::Updated2025,
-                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967288',
-                'note'     => 'Update in progress https://bugzilla.mozilla.org/2039846',
+                'version'  => '1.9',
+                'outdated' => Status::Updated2026,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039846',
+                'note'     => '',
+                'checked'  => '2026-04',
             ],
             'id' => [
                 'source'   => 'https://github.com/shuLhan/hunspell-id/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
-                'version'  => '1.2', // Outdated
-                'outdated' => Status::Outdated,
-                'bug'      => '',
-                'note'     => 'Update in progress https://bugzilla.mozilla.org/show_bug.cgi?id=2040011',
+                'version'  => '2.3.0', // Outdated
+                'outdated' => Status::Updated2026,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040011',
+                'note'     => '',
+                'checked'  => '2026-04',
             ],
             'ja' => [
                 'source'   => 'http://wordlist.aspell.net/',
@@ -165,6 +182,8 @@ class Dictionaries
                 'version'  => '2020.12.07',
                 'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
+                'checked'  => '2026-04',
+                'checked'  => '2026-04',
             ],
             'ja-JP-mac' => [
                 'source'   => 'http://wordlist.aspell.net/',
@@ -172,6 +191,7 @@ class Dictionaries
                 'version'  => '2020.12.07',
                 'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
+                'checked'  => '2026-04',
             ],
             'ko' => [
                 'source'   => 'https://github.com/spellcheck-ko/hunspell-dict-ko',
@@ -179,6 +199,7 @@ class Dictionaries
                 'version'  => '',
                 'outdated' => Status::Incompatible,
                 'note'     => '.aff and .dic files are GPL 3. Only project found for Korean.',
+                'checked'  => '2026-04',
             ],
             'ku' => [
                 'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/rastniv%C3%AEs/',
@@ -186,6 +207,7 @@ class Dictionaries
                 'version'  => '0.96',
                 'outdated' => Status::Unknown,
                 'note'     => 'We don’t seem to still ship the ku locale, yet we still have the code in tree. . No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'lt' => [
                 'source'   => 'https://github.com/ispell-lt/ispell-lt/',
@@ -193,14 +215,16 @@ class Dictionaries
                 'version'  => '1.3.2',
                 'outdated' => Status::OK,
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'lv' => [
                 'source'   => 'https://dict.dv.lv/download.php?prj=lv',
                 'license'  => 'LGPL-2.1',
-                'version'  => '1.4.0',
-                'outdated' => Status::Updated2025,
-                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967651',
-                'note'     => 'Update in progress https://bugzilla.mozilla.org/show_bug.cgi?id=2039868',
+                'version'  => '1.5.0',
+                'outdated' => Status::Updated2026,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039868',
+                'note'     => '',
+                'checked'  => '2026-04',
             ],
             'mk' => [
                 'source'   => 'https://wiki.mozilla.org/L10n:Dictionaries#Macedonian_[mk]',
@@ -209,6 +233,7 @@ class Dictionaries
                 'outdated' => Status::Removed2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966699',
                 'note'     => 'Removed for incompatible licence',
+                'checked'  => '2025-05',
             ],
             'nl' => [
                 'source'   => 'https://github.com/OpenTaal/opentaal-hunspell',
@@ -216,14 +241,16 @@ class Dictionaries
                 'version'  => '2.20.19',
                 'outdated' => Status::OK,
                 'note'     => 'No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'pl' => [
                 'source'   => 'https://sjp.pl/sl/en/',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '2025-03-01',
-                'outdated' => Status::Updated2025,
-                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967435',
-                'note'     => 'Update in progress https://bugzilla.mozilla.org/2039841',
+                'version'  => '2026-05-11',
+                'outdated' => Status::Updated2026,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039841',
+                'note'     => '',
+                'checked'  => '2026-04',
             ],
             'pt-BR' => [
                 'source'   => 'https://addons.mozilla.org/pt-PT/firefox/addon/corretor/',
@@ -232,6 +259,7 @@ class Dictionaries
                 'outdated' => Status::Updated2025,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1968153',
                 'note'     => '2026: no new version',
+                'checked'  => '2026-04',
             ],
             'pt-PT' => [
                 'source'   => '',
@@ -239,6 +267,7 @@ class Dictionaries
                 'version'  => '20.10.5.1',
                 'outdated' => Status::OK,
                 'note'     => 'Source: https://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/LATEST/ . The site is dead, looks like Libreoffice has an updated one https://gerrit.libreoffice.org/c/dictionaries/+/192373?tab=comments . Dead project. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'rm' => [
                 'source'   => 'www.liarumantscha.ch',
@@ -246,6 +275,7 @@ class Dictionaries
                 'version'  => '1.0',
                 'outdated' => Status::OK,
                 'note'     => 'Dead project. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'ro' => [
                 'source'   => 'https://sourceforge.net/projects/rospell/files/Romanian%20dictionaries/',
@@ -253,6 +283,7 @@ class Dictionaries
                 'version'  => '3.3.10',
                 'outdated' => Status::OK,
                 'note'     => 'Dead project. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'ru' => [
                 'source'   => 'https://bugzilla.mozilla.org/show_bug.cgi?id=451409',
@@ -260,6 +291,7 @@ class Dictionaries
                 'version'  => '1.2', // outdated see https://code.google.com/archive/p/hunspell-ru/
                 'outdated' => Status::Outdated,
                 'note'     => 'TODO, there are alternatives',
+                'checked'  => '2025-05',
             ],
             'sk' => [
                 'source'   => 'https://spell.linux.sk/hunspell-sk',
@@ -267,6 +299,7 @@ class Dictionaries
                 'version'  => '2.03-0, 2009-12-05',
                 'outdated' => Status::OK,
                 'note'     => 'Dead project. No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'sr' => [
                 'source'   => 'Similar to https://devbase.net/dict-sr/ ?',
@@ -274,6 +307,7 @@ class Dictionaries
                 'version'  => '??',
                 'outdated' => Status::Unknown,
                 'note'     => 'https://github.com/grakic/hunspell-sr?tab=readme-ov-file ? . No update in May 2026.',
+                'checked'  => '2026-04',
             ],
             'sv-SE' => [
                 'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/g%C3%B6rans-hemmasnickrade-ordli/',
@@ -282,6 +316,7 @@ class Dictionaries
                 'outdated' => Status::Outdated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1967541',
                 'note'     => 'Update in progress https://bugzilla.mozilla.org/show_bug.cgi?id=2039952',
+                'checked'  => '2026-04',
             ],
             'uk' => [
                 'source'   => 'https://github.com/brown-uk/dict_uk/releases',
@@ -289,6 +324,7 @@ class Dictionaries
                 'version'  => '6.8.0',
                 'outdated' => Status::Updated2026,
                 'note'     => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
+                'checked'  => '2026-04',
             ],
             'vi' => [
                 'source'   => '',
@@ -297,6 +333,7 @@ class Dictionaries
                 'outdated' => Status::Removed2024,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1912392',
                 'note'     => '',
+                'checked'  => '2025-05',
             ],
             'zh-TW' => [
                 'source'   => 'http://wordlist.aspell.net/',
@@ -304,6 +341,7 @@ class Dictionaries
                 'version'  => '2020.12.07',
                 'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
+                'checked'  => '2026-04',
             ],
         ],
     ];
