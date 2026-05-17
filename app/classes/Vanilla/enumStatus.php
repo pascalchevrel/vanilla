@@ -15,6 +15,6 @@ enum enumStatus: string
     case Candidate    = 'Dictionary candidate';
     case Added2025    = 'Added in 2025';
     case Added2026    = 'Added in 2026';
-    case Unknown      = 'Unknown';
-    case WIP          = 'Work in progress';
+    case Unknown      = 'Unknown source';
+    case NoneFound    = 'No dictionary found';
 }

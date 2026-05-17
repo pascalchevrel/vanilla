@@ -303,11 +303,11 @@ class Dictionaries
                 'checked'  => '2026-04',
             ],
             'sr' => [
-                'source'   => 'Similar to https://devbase.net/dict-sr/ ?',
+                'source'   => '',
                 'license'  => 'GPL-2.0 / LGPL-2.1 / MPL-1.1',
-                'version'  => '??',
+                'version'  => '2010-08-18',
                 'outdated' => Status::Unknown,
-                'note'     => 'https://github.com/grakic/hunspell-sr?tab=readme-ov-file ? . No update in May 2026.',
+                'note'     => 'https://github.com/grakic/hunspell-sr?tab=readme-ov-file or https://devbase.net/dict-sr/ as alternatives?',
                 'checked'  => '2026-04',
             ],
             'sv-SE' => [
@@ -319,12 +319,29 @@ class Dictionaries
                 'note'     => 'Update in progress https://bugzilla.mozilla.org/show_bug.cgi?id=2039952',
                 'checked'  => '2026-04',
             ],
+            'tr' => [
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/g%C3%B6rans-hemmasnickrade-ordli/',
+                'license'  => 'MPL-2.0',
+                'version'  => '1.1.1',
+                'outdated' => Status::Candidate,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040207',
+                'note'     => 'Found by Selim',
+                'checked'  => '2026-04',
+            ],
             'uk' => [
                 'source'   => 'https://github.com/brown-uk/dict_uk/releases',
                 'license'  => 'GPL-3.0 / LGPL-2.1 / MPL-1.1',
                 'version'  => '6.8.0',
                 'outdated' => Status::Updated2026,
                 'note'     => 'Licence https://github.com/brown-uk/dict_uk/blob/master/distr/hunspell/header/README_uk_UA.txt',
+                'checked'  => '2026-04',
+            ],
+            'uz' => [
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/uzbek-spell-checker/versions/',
+                'license'  => 'GPL-2.0',
+                'version'  => '',
+                'outdated' => Status::Incompatible,
+                'note'     => '',
                 'checked'  => '2026-04',
             ],
             'vi' => [
@@ -335,6 +352,32 @@ class Dictionaries
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1912392',
                 'note'     => '',
                 'checked'  => '2025-05',
+            ],
+            'xh' => [
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/xhosa-spell-checker/versions/',
+                'license'  => 'LGPL-2.1',
+                'version'  => '20110323.3',
+                'outdated' => Status::Candidate,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040208',
+                'note'     => 'Old, 2004, but exists',
+                'checked'  => '2026-04',
+            ],
+            'wo' => [
+                'source'   => '',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::NoneFound,
+                'bug'      => '',
+                'note'     => '',
+                'checked'  => '2026-04',
+            ],
+            'zh-CN' => [
+                'source'   => '',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::NoneFound,
+                'note'     => 'Could not find one',
+                'checked'  => '2026-04',
             ],
             'zh-TW' => [
                 'source'   => 'http://wordlist.aspell.net/',
@@ -351,10 +394,7 @@ class Dictionaries
 
     public function __construct() {
         $this->supported_locales = array_keys($this->data['locales']);
-        // Manually remove some locales for now
-        $this->supported_locales = array_diff($this->supported_locales, ['cy', 'mk', 'vi', 'ko']);
     }
-
 
     public function getSupportedLocales() : array
     {
@@ -374,9 +414,12 @@ class Dictionaries
     public function supported(string $locale): bool
     {
         if ($locale === 'ku') {
-            /* We don't ship Firefox in Kurdish anymore but we still have the dictionary ion tree */
-            return true;
+            /* We don't ship Firefox in Kurdish anymore but we still have the dictionary in tree */
+            return false;
         }
+
+        $this->supported_locales = array_diff($this->supported_locales, ['mk', ' vi', 'ko', 'ku', 'zh-CN']);
+
 
         /* If if was removed then return false */
         if (in_array($locale, $this->supported_locales))  {
@@ -384,6 +427,8 @@ class Dictionaries
                 $this->data['locales'][$locale]['outdated'] === Status::Removed2024
                 || $this->data['locales'][$locale]['outdated'] === Status::Removed2025
                 || $this->data['locales'][$locale]['outdated'] === Status::Candidate
+                || $this->data['locales'][$locale]['outdated'] === Status::Incompatible
+                || $this->data['locales'][$locale]['outdated'] === Status::NoneFound
             ) {
                 return false;
             }
