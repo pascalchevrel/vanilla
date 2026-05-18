@@ -498,7 +498,7 @@ class Dictionaries
             return false;
         }
 
-        $this->supported_locales = array_diff($this->supported_locales, ['mk', ' vi', 'ko', 'ku', 'zh-CN']);
+        $this->supported_locales = array_diff($this->supported_locales, ['mk', 'ko', 'ku', 'zh-CN']);
 
 
         /* If if was removed then return false */
