@@ -334,7 +334,7 @@ class Dictionaries
                 'source'   => 'https://bugzilla.mozilla.org/show_bug.cgi?id=451409',
                 'license'  => 'Custom, see source',
                 'version'  => '1.2', // outdated see https://code.google.com/archive/p/hunspell-ru/
-                'outdated' => Status::Candidate,
+                'outdated' => Status::Outdated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040224',
                 'note'     => 'TODO, there are alternatives',
                 'checked'  => '2025-05',

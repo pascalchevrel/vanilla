@@ -5,7 +5,7 @@ namespace Vanilla;
 enum enumStatus: string
 {
     case OK           = 'Up to date';
-    case Outdated     = 'Outdated';
+    case Outdated     = '2026: Outdated';
     case Incompatible = 'Incompatible license';
     case Removed2024  = '2004: Removed';
     case Removed2025  = '2025: Removed';
