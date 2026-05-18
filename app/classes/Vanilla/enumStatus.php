@@ -7,14 +7,14 @@ enum enumStatus: string
     case OK           = 'Up to date';
     case Outdated     = 'Outdated';
     case Incompatible = 'Incompatible license';
-    case Removed2024  = 'Removed in 2024';
-    case Removed2025  = 'Removed in 2025';
+    case Removed2024  = '2004: Removed';
+    case Removed2025  = '2025: Removed';
     case Upgrade      = 'Upgrading';
-    case Updated2025  = 'Updated in 2025';
-    case Updated2026  = 'Updated in 2026';
-    case Candidate    = 'Dictionary candidate';
-    case Added2025    = 'Added in 2025';
-    case Added2026    = 'Added in 2026';
+    case Updated2025  = '2025: Updated';
+    case Updated2026  = '2026: Updated';
+    case Candidate    = '2026: Dictionary candidate';
+    case Added2025    = '2025: Added';
+    case Added2026    = '2026: Added';
     case Unknown      = 'Unknown source';
     case NoneFound    = 'No dictionary found';
 }
