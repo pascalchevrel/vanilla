@@ -45,6 +45,15 @@ class Dictionaries
                 'note'     => '',
                 'checked'  => '2026-04',
             ],
+            'bn' => [
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/bn-bd-spellchecker/',
+                'license'  => 'GPL-2.0',
+                'version'  => '',
+                'outdated' => Status::Incompatible,
+                'bug'      => '',
+                'note'     => '',
+                'checked'  => '2026-04',
+            ],
             'bo' => [
                 'source'   => 'https://github.com/eroux/hunspell-bo/',
                 'license'  => 'CC0',
@@ -113,6 +122,15 @@ class Dictionaries
                 'version'  => '2020.12.07',
                 'outdated' => Status::OK,
                 'note'     => 'Same project source as en-US',
+                'checked'  => '2026-04',
+            ],
+            'en-GB' => [
+                'source'   => 'http://wordlist.aspell.net/',
+                'license'  => 'LGPL-3',
+                'version'  => '2026.05.01',
+                'outdated' => Status::Candidate,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2041377',
+                'note'     => 'Why do we not ship with it? Very popular addon',
                 'checked'  => '2026-04',
             ],
             'es-AR' => [
@@ -204,6 +222,15 @@ class Dictionaries
                 'note'     => '',
                 'checked'  => '2026-04',
             ],
+            'hi-IN' => [
+                'source'   => 'https://github.com/Shreeshrii/hindi-hunspell',
+                'license'  => 'GPL-3.0',
+                'version'  => '',
+                'outdated' => Status::Incompatible,
+                'bug'      => '',
+                'note'     => '',
+                'checked'  => '2026-04',
+            ],
             'hu' => [
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
@@ -270,7 +297,7 @@ class Dictionaries
                 'license'  => 'GPL-3.0',
                 'version'  => '',
                 'outdated' => Status::Incompatible,
-                'note'     => '.aff and .dic files are GPL 3. Only project found for Korean.',
+                'note'     => '.aff and .dic files are GPL 3. https://github.com/jihuichoi/korean-spellchecker is also not compatible: CC by 4.0',
                 'checked'  => '2026-04',
             ],
             'ku' => [
@@ -306,6 +333,15 @@ class Dictionaries
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1966699',
                 'note'     => 'Removed for incompatible licence',
                 'checked'  => '2025-05',
+            ],
+            'mr' => [
+                'source'   => 'https://github.com/Shreeshrii/hindi-hunspell/tree/master',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::Incompatible,
+                'bug'      => '',
+                'note'     => 'A dictionary exists but it has no license',
+                'checked'  => '2026-04',
             ],
             'nb-NO' => [
                 'source'   => 'https://github.com/wooorm/dictionaries/blob/main/dictionaries/nb/readme.md',
@@ -425,6 +461,15 @@ class Dictionaries
                 'note'     => 'Shipped in Chromium',
                 'checked'  => '2026-04',
             ],
+            'ta' => [
+                'source'   => 'https://addons.mozilla.org/fr/firefox/addon/telugu-spell-checker/',
+                'license'  => '',
+                'version'  => '',
+                'outdated' => Status::NoneFound,
+                'bug'      => '',
+                'note'     => 'The addon is abandonned and a stub, no licence.',
+                'checked'  => '2026-04',
+            ],
             'tg' => [
                 'source'   => 'https://github.com/ImloYor/firefox-dictionary',
                 'license'  => 'MIT',
@@ -477,13 +522,13 @@ class Dictionaries
                 'checked'  => '2026-04',
             ],
             'vi' => [
-                'source'   => '',
-                'license'  => '',
+                'source'   => 'https://github.com/1ec5/hunspell-vi',
+                'license'  => 'GPL-3',
                 'version'  => '',
                 'outdated' => Status::Removed2024,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=1912392',
-                'note'     => '',
-                'checked'  => '2025-05',
+                'note'     => 'No other option',
+                'checked'  => '2026-04',
             ],
             'xh' => [
                 'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/xhosa-spell-checker/versions/',
@@ -549,9 +594,6 @@ class Dictionaries
             /* We don't ship Firefox in Kurdish anymore but we still have the dictionary in tree */
             return false;
         }
-
-        $this->supported_locales = array_diff($this->supported_locales, ['mk', 'ko', 'ku', 'zh-CN']);
-
 
         /* If if was removed then return false */
         if (in_array($locale, $this->supported_locales))  {
