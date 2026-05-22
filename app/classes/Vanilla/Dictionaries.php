@@ -134,12 +134,12 @@ class Dictionaries
                 'checked'  => '2026-04',
             ],
             'en-GB' => [
-                'source'   => 'http://wordlist.aspell.net/',
+                'source'   => 'https://github.com/marcoagpinto/aoo-mozilla-en-dict',
                 'license'  => 'LGPL-3',
                 'version'  => '2026.05.01',
-                'outdated' => Status::Candidate,
+                'outdated' => Status::Added2026,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2041377',
-                'note'     => 'Why do we not ship with it? Very popular addon',
+                'note'     => '',
                 'checked'  => '2026-04',
             ],
             'es-AR' => [
