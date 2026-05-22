@@ -89,6 +89,15 @@ class Dictionaries
                 'note'     => '',
                 'checked'  => '2026-04',
             ],
+            'cs' => [
+                'source'   => 'https://gitlab.com/strepon/czech-cc0-dictionaries',
+                'license'  => 'CCO',
+                'version'  => '',
+                'outdated' => Status::Investigation,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2041632',
+                'note'     => '',
+                'checked'  => '2026-04',
+            ],
             'cy' => [
                 'source'   => 'https://github.com/techiaith/hunspell-cy',
                 'license'  => 'LGPL-3.0',
@@ -292,6 +301,23 @@ class Dictionaries
                 'note'     => 'Also on AMO (354 users). Looks stale but exists.',
                 'checked'  => '2026-04',
             ],
+            'kab' => [
+                'source'   => 'https://addons.mozilla.org/fr/firefox/addon/imse%C9%A3ti-n-tira-n-teqbaylit/',
+                'license'  => 'MIT?',
+                'version'  => '',
+                'outdated' => Status::Investigation,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2041618',
+                'note'     => 'Potentially integrate the extension if the license and source are clarified?',
+                'checked'  => '2026-04',
+            ],
+            'km' => [
+                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/khmer-sbbic-spelling-checker/',
+                'license'  => 'No licence',
+                'version'  => '',
+                'outdated' => Status::Incompatible,
+                'note'     => 'also see https://sbbic.org/ as source',
+                'checked'  => '2026-04',
+            ],
             'ko' => [
                 'source'   => 'https://github.com/spellcheck-ko/hunspell-dict-ko',
                 'license'  => 'GPL-3.0',
@@ -362,6 +388,14 @@ class Dictionaries
             'nn-NO' => [
                 'source'   => 'https://github.com/postgrespro/hunspell_dicts/tree/master/hunspell_nn_no',
                 'license'  => 'GPL',
+                'version'  => '',
+                'outdated' => Status::Incompatible,
+                'note'     => '',
+                'checked'  => '2026-04',
+            ],
+            'oc' => [
+                'source'   => 'https://dicodoc.eu/fr/tutoriels#tutocorr',
+                'license'  => 'closed source',
                 'version'  => '',
                 'outdated' => Status::Incompatible,
                 'note'     => '',
@@ -594,6 +628,7 @@ class Dictionaries
                 || $this->data['locales'][$locale]['outdated'] === Status::Candidate
                 || $this->data['locales'][$locale]['outdated'] === Status::Incompatible
                 || $this->data['locales'][$locale]['outdated'] === Status::NoneFound
+                || $this->data['locales'][$locale]['outdated'] === Status::Investigation
             ) {
                 return false;
             }
