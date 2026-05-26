@@ -18,4 +18,5 @@ enum enumStatus: string
     case Unknown       = 'Unknown source';
     case NoneFound     = 'No dictionary found';
     case Investigation = '2026: Investigation';
+    case English       = 'English dictionary';
 }
