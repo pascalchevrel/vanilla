@@ -449,7 +449,7 @@ class Dictionaries
                 'version'  => '1.2', // outdated see https://code.google.com/archive/p/hunspell-ru/
                 'outdated' => Status::Outdated,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040224',
-                'note'     => 'TODO, there are alternatives',
+                'note'     => 'TODO, there are alternatives. Valentin wants to create a Mozilla directory.',
                 'checked'  => '2025-05',
             ],
             'sl' => [
