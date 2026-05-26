@@ -14,6 +14,8 @@ class FirefoxL10n
         dictionaries we ship with, the upstream projects as well as AMO dictionaries section.
         The data is known as correct at the date below.
 
+        ja-JP-mac is removed as it is not useful.
+
         The locales we care about are those we actually ship products for. There are WIP locales but they are out
         of the scope of this class.
     */
@@ -24,7 +26,7 @@ class FirefoxL10n
         'ach', 'af', 'an', 'ar', 'ast', 'az', 'be', 'bg', 'bn', 'br', 'bs', 'ca', 'ca-valencia', 'cak', 'cs', 'cy', 'da',
         'de', 'dsb', 'el', 'en-CA', 'en-GB', 'en-US', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et', 'eu', 'fa', 'ff',
         'fi', 'fr', 'fur', 'fy-NL', 'ga-IE', 'gd', 'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb', 'hu', 'hy-AM', 'ia',
-        'id', 'is', 'it', 'ja', 'ja-JP-mac', 'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lt', 'lv', 'mk', 'mr', 'ms',
+        'id', 'is', 'it', 'ja', 'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lt', 'lv', 'mk', 'mr', 'ms',
         'my', 'nb-NO', 'ne-NP', 'nl', 'nn-NO', 'oc', 'pa-IN', 'pl', 'pt-BR', 'pt-PT', 'rm', 'ro', 'ru', 'sat', 'sc',
         'sco', 'si', 'sk', 'skr', 'sl', 'son', 'sq', 'sr', 'sv-SE', 'szl', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'trs',
         'uk', 'ur', 'uz', 'vi', 'xh', 'zh-CN', 'zh-TW',
@@ -32,10 +34,10 @@ class FirefoxL10n
 
     // Source: https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/browser/locales/all-locales
     public array $desktop_locales_all = [
-        'ach', 'af', 'an', 'ar', 'ast', 'az', 'be', 'bg', 'bn', 'bo', 'br', 'brx', 'bs', 'ca', 'ca-valencia', 'cak', 'ckb',
+        'ach', 'af', 'an', 'ar', 'ast', 'az', 'be', 'bg', 'bn', 'bo', 'bqi', 'br', 'brx', 'bs', 'ca', 'ca-valencia', 'cak', 'ckb',
         'cs', 'cy', 'da', 'de', 'dsb', 'el', 'en-CA', 'en-GB', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et', 'eu', 'fa', 'ff',
         'fi', 'fr', 'fur', 'fy-NL', 'ga-IE', 'gd', 'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb', 'hu', 'hy-AM', 'hye', 'ia',
-        'id', 'is', 'it', 'ja', 'ja-JP-mac', 'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lo', 'lt', 'ltg', 'lv', 'meh', 'mk',
+        'id', 'is', 'it', 'ja', 'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lo', 'lt', 'ltg', 'lv', 'meh', 'mk',
         'ml', 'mr', 'ms', 'my', 'nb-NO', 'ne-NP', 'nl', 'nn-NO', 'oc', 'pa-IN', 'pl', 'pt-BR', 'pt-PT', 'rm', 'ro', 'ru', 'sat',
         'sc', 'scn', 'sco', 'si', 'sk', 'skr', 'sl', 'son', 'sq', 'sr', 'sv-SE', 'szl', 'ta', 'te', 'tg', 'th', 'tl', 'tr',
         'trs', 'uk', 'ur', 'uz', 'vi', 'wo', 'xh', 'zh-CN', 'zh-TW'
@@ -64,6 +66,7 @@ class FirefoxL10n
         'bg'          => 'Bulgarian',
         'bn'          => 'Bengali',
         'bo'          => 'Tibetan',
+        'bqi'         => 'Luri Bakhtiari',
         'br'          => 'Breton',
         'brx'         => 'Bodo',
         'bs'          => 'Bosnian',

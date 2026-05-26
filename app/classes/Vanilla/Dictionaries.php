@@ -285,20 +285,13 @@ class Dictionaries
                 'checked'  => '2026-04',
                 'checked'  => '2026-04',
             ],
-            'ja-JP-mac' => [
-                'source'   => 'http://wordlist.aspell.net/',
-                'license'  => 'BSD',
-                'version'  => '2020.12.07',
-                'outdated' => Status::OK,
-                'note'     => 'Same project source as en-US',
-                'checked'  => '2026-04',
-            ],
             'ka' => [
                 'source'   => 'https://github.com/gamag/ka_GE.spell/tree/master',
                 'license'  => 'MIT',
                 'version'  => '0.1',
                 'outdated' => Status::Added2026,
                 'note'     => 'Also on AMO (354 users). Looks stale but exists.',
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040211',
                 'checked'  => '2026-04',
             ],
             'kab' => [
