@@ -196,7 +196,7 @@ class Dictionaries
                 'checked'  => '2026-05',
             ],
             'fi' => [
-                'source'   => 'https://github.com/b00f/lilak/',
+                'source'   => 'https://github.com/fginter/hunspell-fi/',
                 'license'  => 'CC0',
                 'version'  => '0.2',
                 'status'   => Status::Candidate,
