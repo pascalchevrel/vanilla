@@ -498,12 +498,12 @@ class Dictionaries
                 'checked'  => '2026-05',
             ],
             'tr' => [
-                'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/g%C3%B6rans-hemmasnickrade-ordli/',
+                'source'   => 'https://github.com/selimsum/hunspell-tr-moz',
                 'license'  => 'MPL-2.0',
-                'version'  => '1.1.1',
+                'version'  => '2.1.0',
                 'status'   => Status::Added2026,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040207',
-                'note'     => 'Found by Selim',
+                'note'     => 'Selim fork of https://bugzilla.mozilla.org/show_bug.cgi?id=2043244',
                 'checked'  => '2026-05',
             ],
             'trs' => [
