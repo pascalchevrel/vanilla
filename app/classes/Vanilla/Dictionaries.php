@@ -243,10 +243,10 @@ class Dictionaries
             'hu' => [
                 'source'   => 'https://github.com/laszlonemeth/magyarispell/',
                 'license'  => 'MPL-2.0 / LGPL-3.0',
-                'version'  => '1.9',
+                'version'  => '1.9.1',
                 'status'   => Status::Updated2026,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2039846',
-                'note'     => '',
+                'note'     => 'Extension with .diff and .aff files at https://addons.mozilla.org/en-US/firefox/addon/hungarian-dictionary/',
                 'checked'  => '2026-05',
             ],
             'hy-AM' => [
