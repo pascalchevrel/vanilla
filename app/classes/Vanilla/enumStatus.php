@@ -17,6 +17,6 @@ enum enumStatus: string
     case Added2026     = '2026: Added';
     case Unknown       = 'Unknown source';
     case NoneFound     = 'No dictionary found';
-    case Investigation = '2026: Investigation';
+    case Investigation = 'Investigation in progress';
     case English       = 'English dictionary';
 }
