@@ -140,7 +140,7 @@ class FirefoxL10n
         'pl'          => 'Polish',
         'pt-BR'       => 'Portuguese (Brasil)',
         'pt-PT'       => 'Portuguese',
-        'rm'          => 'Romantch',
+        'rm'          => 'Romansh',
         'ro'          => 'Romanian',
         'ru'          => 'Russian',
         'sat'         => 'Santali',

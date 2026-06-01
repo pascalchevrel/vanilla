@@ -421,12 +421,13 @@ class Dictionaries
                 'checked'  => '2026-05',
             ],
             'rm' => [
-                'source'   => 'www.liarumantscha.ch',
+                'source'   => 'https://github.com/farscrl/spellcheckers-rumantschs/blob/main/dictionaries/rm-rumgr/rm-rumgr_version.txt',
                 'license'  => 'MIT',
-                'version'  => '1.0',
-                'status'   => Status::OK,
-                'note'     => 'Dead project. No update in May 2026.',
-                'checked'  => '2026-05',
+                'version'  => '2.2.1-260527.032231',
+                'status'   => Status::Upgrade,
+                'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2044034',
+                'note'     => 'https://github.com/farscrl/spellcheckers-rumantschs/blob/main/dictionaries/rm-rumgr/',
+                'checked'  => '2026-06',
             ],
             'ro' => [
                 'source'   => 'https://sourceforge.net/projects/rospell/files/Romanian%20dictionaries/',
