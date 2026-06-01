@@ -91,11 +91,11 @@ class Dictionaries
             ],
             'cs' => [
                 'source'   => 'https://gitlab.com/strepon/czech-cc0-dictionaries',
-                'license'  => 'CCO',
+                'license'  => 'CC0',
                 'version'  => '',
-                'status'   => Status::Investigation,
+                'status'   => Status::NoneFound,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2041632',
-                'note'     => '',
+                'note'     => 'The CC0 dictionary is not in a state that we can ship in my lifetime :(',
                 'checked'  => '2026-05',
             ],
             'cy' => [
