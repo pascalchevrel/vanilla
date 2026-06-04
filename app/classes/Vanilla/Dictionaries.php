@@ -31,9 +31,9 @@ class Dictionaries
                 'source'   => 'https://addons.mozilla.org/en-US/firefox/addon/correutor_asturianu/versions/',
                 'license'  => 'GPL-3.0',
                 'version'  => '4.4.5',
-                'status'   => Status::Incompatible,
+                'status'   => Status::Investigation,
                 'bug'      => 'https://bugzilla.mozilla.org/show_bug.cgi?id=2040221',
-                'note'     => 'We could reach out to Softastur to relicense.',
+                'note'     => 'Softastur agrees to relicense, need a new version with a Mozilla-compatible license.',
                 'checked'  => '2026-05',
             ],
             'bg' => [
